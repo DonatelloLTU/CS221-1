@@ -1,0 +1,11 @@
+                                                  Recursion
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Backtracking
+	- A strategy for guessing at a solution and backing up when an impasse is reached
+
+Formal definition for JavaPrograms
+
+	JavaPrograms = {strings w : w is syntactically correct Java program}
+
+	AlgebraicExpressions = {w : w is an algebraic expression}

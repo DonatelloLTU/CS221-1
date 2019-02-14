@@ -1,0 +1,13 @@
+Comparing .equals() method and == operator
+------------------------------------------
+
+== Compares primitive data types
+	 Compares object references. 
+
+.equals() defined in Object class
+	Compares object identity
+	Should be overridden to compare 
+	Compares hash code when not overridden
+	Compares what is inside of object when overridden correctly 
+	
+	

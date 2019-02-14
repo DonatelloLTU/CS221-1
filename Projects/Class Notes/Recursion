@@ -1,0 +1,186 @@
+												Recursion
+___________________________________________________________________________________________________________________________
+
+Binary Search & Sequential search both have 2 base cases: Find or did not find
+
+This to be considered when doing a construction recursive solution:
+	- How can you define the problem in terms of a smaller problem of the same type?
+	- How does each recursive call diminish the size of the problem?
+	- What instance of the problem can serve as the base case?
+	- As the problem size diminishes, will you reach this base case?
+
+Iterative Factorial of n
+
+	factorial(n) = n * (n - 1) * (n - 2) * ... * 1 for any integer n > 0
+	factorial(0) = 1
+	
+Recursive factorial of n
+
+					
+	Factorial(n) = 	{ 1						if n = 0
+					{ n * factorial(n - 1)	if n > 0
+					
+Recurrence Relation
+
+	- A mathematical formula that generates the terms in a sequence from previous terms
+	
+	Factorial = n * [(n - 1) * (n - 2) * ... * 1]
+			  = n * factorial(n - 1)
+			  
+Box trace
+
+	- A systematic way to trace the actions of a recursive method
+	- Each box roughly corresponds to an activation record
+	- An activation record
+		- Contains a method's local environment at the time of and as a result of the call to the method
+
+A Method's local environment local environment:
+	
+	- The methods local variables
+	- A copy of the actual value arguments
+	- A return address in the calling routine
+	- The value of the method itself
+	
+	-----------------------
+	|  n = 3              |
+	|  A: fact(n - 1) = ? |
+	|  return ?			  |
+	-----------------------
+	
+Box trace on doing a String backwards
+
+	
+	BasAckwards(String s)  {	Return emptyString
+						   {	Return lastElement
+						   {	Print lastElement
+						   {	Call BasAckwards(s - lastElement)
+						   
+		public void basAckwards(String s)
+		{
+			if(s.isEmpty())
+			{
+				return;
+			}
+			else
+			{
+				System.out.println(s.charAt(s.length() - 1);
+				BasAckwards(new String s.subString(o, s.length - 1);
+			}
+		}	
+	
+	        Cat
+	-----------------------
+	|  print: t           |
+	|  BasAckwards(Ca)    | -->
+	-----------------------
+	
+	-----------------------
+	|  print: a           |
+	|  basAckwards(C)     | -->
+	-----------------------
+	
+	-----------------------
+	|  print: C           |
+	|  BasAckwards()      | -->
+	-----------------------
+	
+	-----------------------
+	|  returns s.isEmpty  | -->
+	-----------------------
+	
+
+Box Trace on Rabbits
+
+	Base Cases:
+		rabbit(2), rabbit(1)
+		
+	Recursive Definition
+		
+		Rabbit(n) = {	1				if n is 1 or 2
+					{	rabbit(n - 1)	if n > 2
+					
+	public int rabbit(int month)
+	{
+		if(month == 1 || month == 2)
+		{
+			return 1;
+		}
+		else
+		{
+			return rabbit(month - 1) + rabbit(month - 2);
+		}							
+	}	
+					
+		   4 months
+	--------------------------
+	|  month: 4              |
+	|  rabbit(3) + rabbit(2) | -->
+	|  return 3              |
+	--------------------------
+	
+	--------------------------
+	|  month: 3              |
+	|  rabbit(2) + rabbit(1) | -->
+	|  return 2              |
+	--------------------------
+	
+	--------------------------
+	|  month: 2              |
+	|  rabbit(1)             | -->
+	|  return 1              |
+	--------------------------
+		
+					
+Box trace on how many ways you can organize a parade
+
+	Rules:
+	- Parade will consist of bands and floats in a single line
+	- One band cannot be placed immediately after another band
+	
+	Let:
+	- P(n) number of ways to organize a parafe of lenth n
+	- F(n) number of parades of length n that end with a float
+	- B(n) number of parades of length n that end with a band
+	
+	Then:
+	- P(n) = F(n) + B(n)
+	
+	- End with a float
+		F(n) = P(n - 1)
+	
+	- End with a band
+		B(n) = F(n - 1)
+	
+	- Number of acceptable parades of length n
+		P(n) = P(n - 1) + P(n - 2)
+		
+	Base Cases:
+		P(1) = 2
+		P(2) = 3
+		
+	Solution:
+		P(1) = 2
+		P(2) = 3
+		P(n) = P(n - 1) + P(n - 2) for n > 2	
+		
+
+
+		
+		
+		
+		
+		
+		
+	
+					
+					
+					
+					
+					
+	
+	
+	
+	
+	
+	
+	

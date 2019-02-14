@@ -1,0 +1,62 @@
+/**
+ * Test class to test all of the public methods in PrefixExpressions.java
+ * @author Mikael Hinton
+ */
+public class TestingPrefixExpressions{
+
+	/*
+	 * Main method
+	 */
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|    Testing PrefixExpression.java     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++");
+		System.out.println();
+		System.out.println();
+		
+		testingIsPrefix();
+		System.out.println();
+		testingEvaluatePrefix();
+	}//EOM
+
+	/*
+	 * testingIsPrefix method in PrefixExpressions.java
+	 */
+	public static void testingIsPrefix()
+	{
+		System.out.println("\t\t*Testing isPrefix()*");
+		
+	}//End of testingIsPrefix()
+	
+	/*
+	 * testingEvaluatePrefix method in PrefixExpressions.java
+	 */
+	public static void testingEvaluatePrefix()
+	{
+		System.out.println("\t\t*Testing EvaluatePrefix()*");
+		
+		String add = "+ab";
+		PrefixExpressions adding = new PrefixExpressions(add);
+		System.out.println("\nAdding two numbers together:\n\tExpected:\n\t10 + 11 = 21.0");
+		System.out.println("\tActual:\n" + "10 + 11 = " + adding.evaluatePrefix());
+		
+		String sub = "-ab";
+		PrefixExpressions subtracting = new PrefixExpressions(sub);
+		System.out.println("\nSubtracting two numbers together:\nExpected:\n10 + 11 = -1.0");
+		System.out.println("Actual:\n" + "10 - 11 = " + subtracting.evaluatePrefix());
+		
+		String mult = "*ab";
+		PrefixExpressions multiplying = new PrefixExpressions(mult);
+		System.out.println("\nMultiplying two numbers together:\nExpected:\n10 + 11 = 110.0");
+		System.out.println("Actual:\n" + "10 + 11 = " + multiplying.evaluatePrefix());
+		
+		String div = "/ab";
+		PrefixExpressions dividing = new PrefixExpressions(div);
+		System.out.println("\nDividing two numbers together:\nExpected:\n10 + 11 = 21.0");
+		System.out.println("Actual:\n" + "10 / 11 = " + dividing.evaluatePrefix());
+		
+	}//End of testingEvaluatePrefix()
+	
+	
+}//EOF

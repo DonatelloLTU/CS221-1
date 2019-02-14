@@ -1,0 +1,52 @@
+/**
+ * Testing the public methods that are in the 
+ * 		Calculator.java class.
+ * 
+ * All methods should have 100% coverage
+ * 		and be exhaustively tested.
+ * 
+ * @author Mikael Hinton
+ *
+ */
+public class CalculatorTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                Testing Calculator               |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		testingEvaluate();
+		testingGetPostFix();
+		
+	}// EOM
+
+	/**
+	 * Testing the evaluate method in the calculator class
+	 */
+	public static void testingEvaluate()
+	{
+		Calculator add = new Calculator("()");
+		System.out.println(add.evaluate());
+	}
+	
+	/**
+	 * Testing the getPostFix method in the calculator class
+	 */
+	public static void testingGetPostFix()
+	{
+		Calculator add = new Calculator("((1-2)-1)");
+		
+		try
+		{
+			System.out.println(add.getPostFix());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Could not convert to PostFix");
+		}
+	}
+	
+	
+	
+}// EOF

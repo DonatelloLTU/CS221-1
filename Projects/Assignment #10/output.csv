@@ -1,0 +1,96 @@
+Author: Mikael Hinton
+
+******************************************************
+                      20,000 Items                       
+******************************************************
+InsertionSort
+Nano Seconds: 
+351497053
+
+QuickSort
+Nano Seconds: 
+4219259
+
+MergeSort
+Nano Seconds: 
+371530325
+
+RadixSort
+Nano Seconds: 
+17348190
+
+******************************************************
+                      40,000 Items                       
+******************************************************
+InsertionSort
+Nano Seconds: 
+1550294509
+
+QuickSort
+Nano Seconds: 
+1045881
+
+MergeSort
+Nano Seconds: 
+589169306
+
+RadixSort
+Nano Seconds: 
+8090984
+
+******************************************************
+                      60,000 Items                       
+******************************************************
+InsertionSort
+Nano Seconds: 
+2569945241
+
+QuickSort
+Nano Seconds: 
+1681504
+
+MergeSort
+Nano Seconds: 
+662751059
+
+RadixSort
+Nano Seconds: 
+6533834
+
+******************************************************
+                      80,000 Items                       
+******************************************************
+InsertionSort
+Nano Seconds: 
+4935575168
+
+QuickSort
+Nano Seconds: 
+2360889
+
+MergeSort
+Nano Seconds: 
+1206281626
+
+RadixSort
+Nano Seconds: 
+7542882
+
+******************************************************
+                      100,000 Items                       
+******************************************************
+InsertionSort
+Nano Seconds: 
+10183489973
+
+QuickSort
+Nano Seconds: 
+4617481
+
+MergeSort
+Nano Seconds: 
+2847902843
+
+RadixSort
+Nano Seconds: 
+16403325

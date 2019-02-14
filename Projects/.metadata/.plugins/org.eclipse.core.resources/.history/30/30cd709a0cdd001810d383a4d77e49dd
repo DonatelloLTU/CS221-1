@@ -1,0 +1,19 @@
+
+public interface IQueue {
+	
+	/**
+	 * Determines whether a queue is empty
+	 * @return true or false
+	 */
+	public boolean isEmpty();
+	
+	/**
+	 * Adds newItem at the back of a queue.Throws
+	 * 		QueueException if the operation is not successful
+	 * @param newItem
+	 * @return
+	 * @throws QueueException
+	 */
+	public Object enqueue(Object newItem) throws QueueException;
+	
+}

@@ -1,0 +1,81 @@
+/**
+ * An implementation that uses the ADT list
+ * @author Mikael Hinton
+ *
+ */
+public class StackReferencedBased implements IStack{
+
+	private Node top;	// top of the stack
+	
+	public StackReferencedBased()
+	{
+		top = null;
+	}// End of constructor
+	
+	
+	
+	/**
+	 * Determine whether the stack is empty.
+	 * PreCondition: None
+	 * PostCondition: Returns true if the stack is empty;
+ 	 *		otherwise returns false
+	 */
+
+	public boolean isEmpty() 
+	{
+		
+		return top == null;
+	}// End of isEmpty
+		
+	// Adds an item to the top of a stack
+	// PreCondition: newItem is the item to be added.
+	// PostCondition: If insertion is successful, newItem
+	//		is on the top of the stack.
+	// Exception: Some implementations may throw
+	// StackExcpetion when newItem cannot be places on the stack.		
+	public void push(Object newItem) throws StackException
+	{
+
+		top = new Node(newItem, top);
+	}// End of push
+
+	@Override
+	public Object pop() throws StackException {
+		
+		if(!isEmpty())
+		{
+			Node temp = top;
+			top = top.next;
+			return temp.item;
+		}
+		else
+		{
+			throw new StackException("StackException on " + "pop: stack empty");
+		}// End if
+	}// End of pop
+
+	// Removes all the items from the stack.
+	// PreCondition: None
+	// PostCondition: Stack is empty.
+	public void popAll() {
+
+		top = null;
+	}// End of popAll
+
+	@Override
+	public Object peek() throws StackException {
+		
+		if(!isEmpty()) 
+		{
+			return top.item;
+		}
+		else
+		{
+			throw new StackException("Stack Exception on " + "peek: stack empty");
+		}
+	}
+
+
+	
+
+}

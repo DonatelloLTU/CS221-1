@@ -1,0 +1,102 @@
+/**
+ * Testing QueueArrayBased.java
+ * @author Mikael Hinton
+ *
+ */
+public class QueueArrayBasedTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|        Testing Queue Array Based        |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+		
+		isEmptyTesting();
+		isFullTesting();
+		enqueueTesting();
+		dequeueTesting();
+		dequeueAllTesting();
+		peekTesting();
+	}//EOM
+	
+	public QueueArrayBased() = new QueueArrayBased();
+	
+	/**
+	 * Testing isEmpty
+	 */
+	public static void isEmptyTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isEmpty          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing isFull
+	 */
+	public static void isFullTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isFull           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing enqueue
+	 */
+	public static void enqueueTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing enqueue          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing dequeue
+	 */
+	public static void dequeueTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing dequeue          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing dequeueAll
+	 */
+	public static void dequeueAllTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|       Testing dequeueAll         |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing peek
+	 */
+	public static void peekTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing peek           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+}//EOF

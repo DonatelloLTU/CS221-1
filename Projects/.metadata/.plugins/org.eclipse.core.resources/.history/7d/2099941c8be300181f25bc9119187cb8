@@ -1,0 +1,83 @@
+
+public class QueueTesting<E> {
+	
+	
+	public static <E> void main(String[] args) {
+
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                   Testing Queue                  |");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println();
+		
+		testingAdd();
+		testingRemove();
+		testingIsEmpty();
+ 
+	}
+	
+	public static <E> void testingAdd()
+	{	
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|             Testing Add           |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		
+		Object testO = new String("Hiii");
+		Object testOO = new String("Byeee");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Adding an item to queue");
+		System.out.println("Size before adding: " + test.size());
+		test.add(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size after adding: " + test.size());
+		test.add(testOO);
+		System.out.println("Size after adding another item: " + test.size());
+	}
+	
+	public static <E> void testingAdd()
+	{	
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|             Testing Offer           |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		
+		Object testO = new String("Hiii");
+		Object testOO = new String("Byeee");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Adding an item to queue");
+		System.out.println("Size before adding: " + test.size());
+		test.add(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size after adding: " + test.size());
+		test.add(testOO);
+		System.out.println("Size after adding another item: " + test.size());
+	}
+	
+	public static <E> void testingRemove()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Remove          |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Object testOO = new String("Byee");
+
+		Queue<E> test = new Queue<E>();
+		
+		test.add(testO);
+		System.out.println(test.size());
+		System.out.println(test.remove());
+		System.out.println(test.size());
+		
+
+	}
+	
+	public static <E> void testingIsEmpty()
+	{
+		Queue<E> test = new Queue<E>();
+
+	}
+
+}

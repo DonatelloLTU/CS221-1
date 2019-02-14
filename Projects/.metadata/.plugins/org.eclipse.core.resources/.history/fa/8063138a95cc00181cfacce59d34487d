@@ -1,0 +1,36 @@
+/**
+ * Testing Node class
+ * @author Mikael Hinton
+ *
+ */
+public class NodeTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++");
+		System.out.println("\t|     Testing Node     |");
+		System.out.println("\t++++++++++++++++++++++++");
+
+		
+		testingNode();	
+	}//EOM
+
+	/*
+	 * Testing Node Class
+	 */
+	public static void testingNode()
+	{
+		Node n2 = new Node(new Integer(34342));
+		Node n1 = new Node(new Integer(13), n2);
+		Node n = new Node(new Integer(4) , n1);
+		Node head = new Node(new Integer(9), n);
+		Node curr = head;
+		System.out.println("\tTesting Node");
+		
+		while(curr != null)
+		{
+			System.out.println(curr.item);
+			curr = curr.next;
+		}
+	}//End of testingNode
+}//EOF

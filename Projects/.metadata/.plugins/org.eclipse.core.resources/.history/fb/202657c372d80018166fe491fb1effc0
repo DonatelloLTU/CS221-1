@@ -1,0 +1,45 @@
+/**
+ * Class that converts and evaluates the Infix expression to a Postfix Expression
+ * @author Mikael Hinton
+ *
+ */
+public class Calculator {
+
+	/***********************************Variables***********************************/
+
+	public String InFixstrExp;
+	public String PostFixStrExp;
+	
+	/***********************************Public Methods***********************************/
+	
+	public void getPostFix() throws IllegalStateException
+	{
+		
+	}
+	
+	public int evaluate() throws IllegalStateException
+	{
+		return 0;
+	}
+	
+	public String toString()
+	{
+		return "";
+	}
+	
+	
+	
+	// The following methods should throw IllegalStateException if
+	// they are called before convertPostFix
+	
+	
+	/***********************************Private Methods***********************************/
+	
+	private boolean convertPostFix()
+	{
+		
+	}
+	
+	
+
+}// EOF

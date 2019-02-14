@@ -1,0 +1,23 @@
+
+public class TestingPrefixExpressions {
+
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|    Testing Prefix Expression     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+	}//EOM
+
+	
+	public static void testingIsPrefix()
+	{
+		
+	}
+	
+	public static void testingEvaluatePrefix()
+	{
+		
+	}
+	
+	
+}//EOF

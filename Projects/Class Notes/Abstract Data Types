@@ -1,0 +1,84 @@
+                                                   Abstract Data Types
+_________________________________________________________________________________________________________________________________________
+
+Modularity
+	- Keeps a large program manageable by systematically controlling the interaction of its components
+	- Isolates errors
+	- Eliminates redundancy
+
+Modular Program
+	- Easier to write
+	- Easier to read
+	- Easier to modify
+	
+Typical operations on data
+	- Add data to a data collection
+	- Remove data from a collection
+	- Ask questions about the data in the data collection
+
+Data Abstraction
+	- Asks you to think what you can do to a collections of data independently of how you do it
+	- Allows you to develop each data structures in relative isolation from the rest of the solution
+	- A natural extension of procedural abstraction
+
+ADT List operations
+	- Create an empty list
+	- Determine whether a list is empty
+	- Determine the number of items in a list
+	- Add an item at a given position in the list
+	- Remove the item at a given position in the list
+	- Remove all the items from the list
+	- Retrieve (get) the item at a given position in the list
+
+Designing an ADT
+	- The design of an ADT should evolve naturally during the problem-solving process
+
+	- Questions to ask when designing an ADT
+		- What data does a problem require?
+		- What operations does a problem require?
+
+Implementing ADTs
+	- Choice of a data structure depends on
+		- Details of the ADTs operations
+		- Context in which the operations will be used
+
+	- Implementation details should be hidden behind a wall of ADT operations
+		- A program would only be able to access the data structure using the ADT operations
+
+Axioms
+	- For complex abstract data types, the behavior of the operations must be specified using axioms
+		-Axiom: A mathematical rule
+		
+Java Interfaces
+	- Specifies methods and constants, but supplies no implementation details
+
+	- Can be used to specify some desired common behavior that may be useful over many different types of objects
+
+	- The java API has many predefined interfaces
+		- Ex: java.util.Collection
+
+	A class that implements an interface must:
+		- Include an implements clause
+		- Provide implementations of the methods of the interface
+
+	To define an interface
+		- Use the keyword interface instead of class in the header
+		- Provide only method specifications and constants in the interface definition
+
+Java Exceptions
+	- A mechanism for handling an error during execution
+	- A method indicates that an error has occurred by throwing an exception
+
+Array based implementation
+	- A lists items are stored in an array items
+	- Both an array and a list identify their items by number
+	- A lists Kth item will be stored in items[k - 1]
+	
+	
+	
+	
+
+	
+	
+	
+	

@@ -1,0 +1,69 @@
+/**
+ * Testing the public methods that are in the 
+ * 		Calculator.java class.
+ * 
+ * All methods should have 100% coverage
+ * 		and be exhaustively tested.
+ * 
+ * @author Mikael Hinton
+ *
+ */
+public class CalculatorTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                Testing Calculator               |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		testingEvaluate();
+		testingGetPostFix();
+		
+	}// EOM
+
+	/**
+	 * Testing the evaluate method in the calculator class
+	 */
+	public static void testingEvaluate()
+	{
+		System.out.println("\n\t++++++++++++++++++++++");
+		System.out.println("\t| Testing Evaluate() |");
+		System.out.println("\t++++++++++++++++++++++");
+
+		System.out.println("\nAdding 2 numbers together:");
+		System.out.println("\nInput: (1+2)");
+		Calculator add = new Calculator("(1+2)");
+		System.out.println("Expected: 3");
+		System.out.println("Actual:   " + add.evaluate());
+		
+		System.out.println("\nSubtracting 2 numbers together:");
+		System.out.println("\nInput: (9-2)");
+		Calculator add = new Calculator("(1+2)");
+		System.out.println("Expected: 3");
+		System.out.println("Actual:   " + add.evaluate());
+	}
+	
+	/**
+	 * Testing the getPostFix method in the calculator class
+	 */
+	public static void testingGetPostFix()
+	{
+		System.out.println("\n\t++++++++++++++++++++++++++++");
+		System.out.println("\t| Testing convertPostFix() |");
+		System.out.println("\t++++++++++++++++++++++++++++");
+		
+		Calculator add = new Calculator("((1-2)-1)");
+		
+		try
+		{
+			System.out.println(add.getPostFix());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Could not convert to PostFix");
+		}
+	}
+	
+	
+	
+}// EOF

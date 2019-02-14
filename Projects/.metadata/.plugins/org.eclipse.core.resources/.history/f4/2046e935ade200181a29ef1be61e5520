@@ -1,0 +1,13 @@
+/**
+ * Testing QueueArrayBased.java
+ * @author Mikael Hinton
+ *
+ */
+public class QueueArrayBasedTesting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

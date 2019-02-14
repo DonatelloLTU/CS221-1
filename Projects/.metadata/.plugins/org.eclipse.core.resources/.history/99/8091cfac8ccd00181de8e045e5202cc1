@@ -1,0 +1,220 @@
+/**
+ * Implementing the interface ISortedLinkedList
+ * @author Mikael Hinton
+ *
+ */
+public class SortedListRefBased implements SortedLinkedListADT {
+
+/****************************VARIABLES***********************************/
+
+	private int size;	// Size of the list
+	private Node head;	// Head node of the list
+	private Node prev;	// Previous node in the list
+	private Node curr;	// Current node in the list
+	
+/****************************CONSTRUCTOR METHOD***********************************/
+
+	/**
+	 * Creates an empty list
+	 */
+	public SortedListRefBased()
+	{
+		size = 0;
+		head = null;
+	}//End of constructor
+	
+/****************************PUBLIC METHODS***********************************/
+	
+	/**
+	 * Determine if list is empty
+	 * @return
+	 */
+	@Override
+	public boolean isEmpty() 
+	{
+		return(head == null);
+	}//End of isEmpty
+
+	/**
+	 * Determine number of items in list
+	 * @return
+	 */
+	@Override
+	public int size() 
+	{
+		if(head == null)
+		{
+			return 0;
+		}
+		else
+		{
+			head = head.next;
+			return 1 + size();
+		}
+	}//End of size
+	
+
+	/**
+	 * Add an item to list
+	 * @param item
+	 */
+	@Override
+	public void insert(Integer item) 
+	{	
+		if(find(item) == true)
+		{
+			System.out.println(item + " is already in list");
+		}
+		else
+		{
+			if(size == 0)
+			{
+				head = new Node(item);
+				size++;
+				return;
+			}
+			else if(item.compareTo(head.getItem()) < 0)
+			{
+				Node insert = new Node(item, head);
+				head = insert;
+				size++;
+				return;
+			}
+			else
+			{
+				
+				head = head.getNext();
+				size++;
+				
+			}
+			insert(item);
+			
+			
+//			Node node = new Node(item);
+//			curr = head;
+//
+//			if(head == curr)
+//			{
+//				node.next = head;
+//				head = node;
+//			}
+//			else
+//			{
+//				node.next = curr;
+//			}
+//			size++;
+//			prev = null;
+//			curr = null;
+		}
+	}//End of insert
+
+	/**
+	 * Remove an item in list
+	 * @param item
+	 */
+	@Override
+	public void remove(Integer item) 
+	{
+		
+	}//End of remove
+
+	/**
+	 * Remove all items from list
+	 */
+	@Override
+	public void removeAll() 
+	{
+		// TODO Auto-generated method stub
+		
+	}//End of removeAll
+
+	/**
+	 * To see if an item is in the list
+	 * @param item
+	 * @return
+	 */
+	@Override
+	public boolean contains(Integer item) 
+	{
+		while(head != null)
+		{
+			if(item.equals(head.item))
+			{
+				return true;
+			}
+			else
+			{
+				head = head.getNext();
+				contains(item);
+			}
+		}
+		return false;
+		
+		/*
+		 * Iterative method
+		 */
+//		Node node = head;
+//		while(node != null)
+//		{
+//			if(item.equals(node.item))
+//			{
+//				return true;
+//			}
+//			else
+//			{
+//				node = node.next;
+//			}
+//		}
+//	return false;
+	}//End of contains
+
+	/**
+	 * Get all items from list
+	 * @return
+	 */
+	@Override
+	public Integer[] getAllItems() 
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}//End of getAllItems
+	
+	/**
+	 * Helper method to print the list to screen
+	 */
+	public void printList()
+	{
+		if(head != null)
+		{
+			curr = head;
+			while(curr != null)
+			{
+				System.out.println(curr.getItem());
+				curr = curr.getNext();
+			}
+		}
+	}
+	
+/****************************PRIVATE METHODS***********************************/
+	/**
+	 * See if the item is in the list
+	 * @param item
+	 * @return
+	 */
+	private boolean find(Integer item)
+	{		
+		if(curr == null)
+		{
+			return false;
+		}
+		if(curr.getItem().equals(item))
+		{
+			return true;
+		}
+		else
+		{
+			curr = curr.getNext();
+			return find(item);
+		}
+	}//End of traverse
+}//EOF

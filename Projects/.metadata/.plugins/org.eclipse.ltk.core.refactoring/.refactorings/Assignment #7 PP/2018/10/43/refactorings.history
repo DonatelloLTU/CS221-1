@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 elements to &apos;PP7/src&apos;&#x0D;&#x0A;- Original project: &apos;Assignment #7 PP&apos;&#x0D;&#x0A;- Destination element: &apos;PP7/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     StackReferencedBased.java&#x0D;&#x0A;     StackException.java&#x0D;&#x0A;     IStack.java&#x0D;&#x0A;     Node.java&#x0D;&#x0A;     StackReferencedBasedTesting.java" description="Copy compilation units" destination="=PP7/src" element1="/Assignment \#7 PP\/src&lt;{StackReferencedBased.java" element2="/Assignment \#7 PP\/src&lt;{StackException.java" element3="/Assignment \#7 PP\/src&lt;{IStack.java" element4="/Assignment \#7 PP\/src&lt;{Node.java" element5="/Assignment \#7 PP\/src&lt;{StackReferencedBasedTesting.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1540489349825" units="5" version="1.0"/>
+</session>

@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+	/***********************************Variables***********************************/
+
+	public String InFixstrExp;
+	public String PostFixStrExp;
+	
+	
+	
+	public Calculator(String Exp);		// initializes infix expression
+	public String toString;				// returns infix expression
+	private boolean convertPostFix();	// creates postfix expression
+										// returns true if successful
+	
+	
+	/***********************************Public Methods***********************************/
+	
+	public void getPostFix() throws IllegalStateException
+	{
+		
+	}
+	
+	
+	
+	
+	
+	// The following methods should throw IllegalStateException if
+	// they are called before convertPostFix
+
+	
+	public int evaluate() throws IllegalStateException
+
+	
+	
+	/***********************************Private Methods***********************************/
+	
+	private boolean convertPostFix()
+	{
+		
+	}
+	
+	
+
+}// EOF

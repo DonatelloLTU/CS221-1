@@ -1,0 +1,60 @@
+											Stacks
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Stacks
+	- First in, last out data structure
+	
+	 |4|
+	 |3|
+	 |2|
+	 |1|
+	 +++
+	
+ADT Stack Operations
+	- Create an empty stack
+	- Determine whether a stack is empty
+	- Add a new item to the stack
+	- Remove from the stack the item that was added most recently
+	- Remove all the items from the stack
+	- Retrieve from the stack the item that was added most recently
+	
+Pseudocode for ADT Stack Operations
+	constructor()
+	// Creates empty stack
+	
+	isEmpty()
+	// Determines whether a stack is empty
+	
+	Push(newItem) throws StackExcpection
+	// Adds newItem to the top of the stack
+	// Throws StackException if the insertion is not successful
+	
+	Pop() throws StackException
+	// Retrieves and then removes the top of the stack
+	// Throws StackException if the deletion is not successful
+	
+	PopAll()
+	// Removes all items from the stack
+	
+	Peek()
+	// Retrieves the top of the stack. Throws
+	// StackException if the retrieval is not successful
+	
+Implementations of the ADT Stack
+	
+	- The ADT stack can be implemented using
+		- An Array
+		- A linked list
+		- The ADT list
+	
+	- StackInterface
+		- Provides a common specification for the three implementations
+		
+	- StackException
+		- Used by StackInterface
+		- Extends java.lang.RuntimeException
+		
+
+	
+
+	

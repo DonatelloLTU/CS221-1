@@ -1,0 +1,46 @@
+/**
+ * Class to to see if a string is a palindrome or not.
+ * @author Mikael Hinton
+ *
+ */
+public class Palindrome {
+
+	// String for a palidrome
+	public static String palStr = "";
+	
+	/**
+	 * Constructor
+	 * @param newStr
+	 */
+	public Palindrome(String newStr) {
+		
+		palStr = newStr;
+	}
+	
+	public static boolean isPalindrome()
+	{
+		
+		String s = new String();
+		Queue queue = new Queue();
+		StackReferencedBased stack = new StackReferencedBased();
+		
+		String nonStr = palStr.replaceAll("[^a-zA-Z0-9]", "");		
+		String lowerStr = nonStr.toLowerCase();
+		
+		for(int i = 0; i < lowerStr.length(); i++)
+		{
+			s = "" + lowerStr.charAt(i);
+			queue.add(s);
+			stack.push(s);
+		}
+		
+		while(!queue.isEmpty())
+		{
+			if(!queue.poll().equals(stack.pop()))
+			{
+				return false;
+			}
+		}
+	return true;
+	}
+}

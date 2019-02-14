@@ -1,0 +1,8 @@
+
+public class InsertionSort {
+
+	void sort(T arr[])
+	{
+		
+	}
+}

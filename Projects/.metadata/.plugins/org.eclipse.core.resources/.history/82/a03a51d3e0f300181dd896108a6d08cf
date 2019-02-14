@@ -1,0 +1,28 @@
+import java.util.Random;
+
+public class Testing {
+
+	private static Random rand;
+
+	public static void main(String[] args) {
+
+		
+		int min = 0;
+		rand = null;
+		int max = 99000;
+		int randomNum = rand.nextInt((max - min) + 1) + min;
+		int count = 0;
+		
+		int size = 1000;
+		QueueArrayBased queue = new QueueArrayBased(size);
+		
+		for(int i = 0; i < size; i++)
+		{
+			queue.add(randomNum);
+			count++;
+		}
+		
+		System.out.println(count);
+	}
+
+}

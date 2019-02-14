@@ -1,0 +1,31 @@
+
+public class CalculatorTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                Testing Calculator               |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		
+	}// EOM
+
+	/**
+	 * Testing the evaluate method in the calculator class
+	 */
+	public static void testingEvaluate()
+	{
+		
+	}
+	
+	/**
+	 * Testing the getPostFix method in the calculator class
+	 */
+	public static void testingGetPostFix()
+	{
+		
+	}
+	
+	
+	
+}// EOF

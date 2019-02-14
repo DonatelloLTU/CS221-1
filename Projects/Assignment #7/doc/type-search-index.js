@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"Calculator"},{"p":"<Unnamed>","l":"CalculatorTesting"},{"p":"<Unnamed>","l":"IStack"},{"p":"<Unnamed>","l":"Node"},{"p":"<Unnamed>","l":"StackException"},{"p":"<Unnamed>","l":"StackReferencedBased"},{"p":"<Unnamed>","l":"StackReferencedBasedTesting"}]

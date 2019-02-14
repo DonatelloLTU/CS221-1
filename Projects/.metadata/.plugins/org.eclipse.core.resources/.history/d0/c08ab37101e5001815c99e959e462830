@@ -1,0 +1,20 @@
+/**
+ * Class to to see if a string is a palindrome or not.
+ * @author Mikael Hinton
+ *
+ */
+public class Palindrome {
+
+	// String for a palidrome
+	public String palStr = "";
+	
+	/**
+	 * Constructor
+	 * @param newStr
+	 */
+	public Palindrome(String newStr) {
+		
+		newStr = palStr;
+	}
+
+}

@@ -1,0 +1,52 @@
+/**
+ * Interface for Deque
+ * @author Mikael Hinton
+ *
+ */
+public interface IDeque {
+
+	/**
+	 * Adds an item at the front of Deque.
+	 * @param e
+	 */
+	public void insertFront(E e);
+	
+	/**
+	 * Adds an item at the rear of Deque.
+	 * @param e
+	 */
+	public void insertRear(E e);
+	
+	/**
+	 * Deletes an item from front of Deque.
+	 */
+	public void deleteFront();
+	
+	/**
+	 * Deletes an item from rear of Deque.
+	 */
+	public void deleteRear();
+	
+	/**
+	 * Checks whether Deque is full or not.
+	 * @return
+	 */
+	public boolean isFull();
+	
+	/**
+	 * Checks whether Deque is empty or not.
+	 * @return
+	 */
+	public boolean isEmpty();
+	
+	/**
+	 * Gets the front item from queue.
+	 * @return
+	 */
+	public E getFront();
+	
+	/**
+	 * Gets the last item from queue.
+	 */
+	public E getRear();
+}

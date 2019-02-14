@@ -1,0 +1,15 @@
+
+public class Palindrome {
+
+	public String palStr = "";
+	
+	/**
+	 * Constructor
+	 * @param newStr
+	 */
+	public Palindrome(String newStr) {
+		
+		newStr = palStr;
+	}
+
+}

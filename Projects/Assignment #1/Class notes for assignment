@@ -1,0 +1,37 @@
+Person Class
+	- name - string
+	- ID - long
+	+ Person(string, long)
+	+ toString() - string
+	+ getName() - string
+	+ getID() - string 
+	
+Student Class
+	- numCredits - double
+	- gradePoints - double
+	+ isEqual() - boolean
+	+ setCredits() - void
+	+ setGradePoint() - void
+	+ getCredits() - double
+	+ getGradePoint() - double
+	+ GPA() - double
+	
+	
+Instructor Class
+	- department - string
+	+ getDepartment() - string
+	+ setDepartment() - void
+	
+Course Class
+	- nameOfCourse - string
+	- courseCode - int
+	- maxStudents - const int
+	+ Instructor - Instructor 
+	+ numberStudents - int
+	+ addStudent() - student
+	+ removeStudent() - student
+	+ saveToFile(string fileName)
+	+ openFile(string fileName)
+
+UUID for making ID's look at this on Java
+	

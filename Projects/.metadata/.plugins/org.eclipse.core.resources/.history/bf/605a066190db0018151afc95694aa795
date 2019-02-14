@@ -1,0 +1,22 @@
+
+public class CalculatorTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                Testing Calculator               |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		
+	}// EOM
+
+	public static void testingEvaluate()
+	{
+		
+	}
+	
+	public static void testingGetPostFix()
+	
+	
+	
+}// EOF

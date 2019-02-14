@@ -1,0 +1,292 @@
+import java.util.NoSuchElementException;
+
+public class QueueTesting<E> {
+	
+	
+	public static <E> void main(String[] args) {
+
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                   Testing Queue                  |");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println();
+		
+		testingAdd();
+		testingOffer();
+		testingRemove();
+		testingPoll();
+		testingElement();
+		testingPeek();
+		testingIsEmpty();
+		testingSize();
+		testingClear();
+		testingContain();
+
+	}
+	
+	public static <E> void testingAdd()
+	{	
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|             Testing Add           |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		
+		Object testO = new String("Hiii");
+		Object testOO = new String("Byeee");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Adding an item to queue");
+		System.out.println("Size before adding: " + test.size());
+		test.add(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size after adding: " + test.size());
+		test.add(testOO);
+		System.out.println("Size after adding another item: " + test.size());
+	
+		Queue<E> test1 = new Queue<E>();
+		System.out.println("\nOffering an item to a full queue:");
+		for(int i = 0; i <= 50; i++)
+		{
+			Object testOOO = new String("HELLLO");
+			if(test1.add(testOOO) == false)
+			{
+				System.out.println("Capacity has been reached!");
+			}
+		}
+		
+	}
+	
+	public static <E> void testingOffer()
+	{	
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|             Testing Offer         |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		
+		Object testO = new String("Hiii");
+		Object testOO = new String("Byeee");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Offering an item to queue:");
+		System.out.println("Size before adding: " + test.size());
+		test.offer(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size after offering: " + test.size());
+		test.offer(testOO);
+		System.out.println("Size after offering another item: " + test.size());
+	
+		Queue<E> test1 = new Queue<E>();
+		System.out.println("\nOffering an item to a full queue:");
+		for(int i = 0; i <= 50; i++)
+		{
+			Object testOOO = new String("HELLLO");
+			if(test1.add(testOOO) == false)
+			{
+				System.out.println("Capacity has been reached!");
+			}
+		}
+	
+	}
+	
+	public static <E> void testingRemove()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Remove          |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Removing an item from empty queue:");
+		try
+		{
+			test.remove();
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("No item to be removed!");
+		}
+		System.out.println();
+		
+		System.out.println("Removing an item from queue:");
+		test.add(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size of queue before removing: " + test.size());
+		System.out.println("Item that was removed: " + test.remove());
+		System.out.println("Size of queue after removing: " + test.size());
+	}
+	
+	public static <E> void testingPoll()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Poll            |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Polling an item from empty queue:");
+		try
+		{
+			test.poll();
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("No item to be removed!");
+		}
+		System.out.println();
+		
+		System.out.println("Polling an item from queue:");
+		test.add(testO);
+		System.out.println("Input: " + test.peek());
+		System.out.println("Size of queue before Polling: " + test.size());
+		System.out.println("Item that was removed: " + test.poll());
+		System.out.println("Size of queue after Polling: " + test.size());
+	}
+	
+	public static <E> void testingElement()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Element         |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Element an  empty queue to see front item:");
+		
+		try 
+		{
+			test.element();
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("No items in queue!");
+		}
+		
+		test.add(testO);
+		
+		System.out.println("\nElement a queue to see front item:");
+		System.out.println("Input: " + test.element());
+		System.out.println("Element in front: " + test.element());
+		
+	}
+	
+	public static <E> void testingPeek()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Peek            |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Peek an  empty queue to see front item:");
+		
+		try 
+		{
+			test.element();
+		}
+		catch(NoSuchElementException e)
+		{
+			System.out.println("No items in queue!");
+		}
+		
+		test.add(testO);
+		
+		System.out.println("\nPeek a queue to see front item:");
+		System.out.println("Input: " + test.peek());
+		System.out.println("Peek in front: " + test.peek());
+		
+	}
+	
+	public static <E> void testingIsEmpty()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing isEmpty         |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Queue when it is empty:");
+		System.out.println("Expected: true");
+		System.out.println("Ouput:    " + test.isEmpty());
+		test.add(testO);
+		System.out.println("Queue when is is NOT empty:");
+		System.out.println("Expected: false");
+		System.out.println("Output:   " + test.isEmpty());
+	}
+	
+	public static <E> void testingSize()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Size            |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Object testO = new String("Hiii");
+		Queue<E> test = new Queue<E>();
+		
+		System.out.println("Queue is empty:");
+		System.out.println("Expected: 0");
+		System.out.println("Actual: " + test.size());
+		
+		System.out.println("\nQueue has 1 item:");
+		test.add(testO);
+		System.out.println("Expected: 1");
+		System.out.println("Actual: " + test.size());
+		
+		for(int i = 0; i < 40; i++)
+		{
+			test.add(testO);
+		}
+		System.out.println("\nQueue has 41 items:");
+		System.out.println("Expected: 41");
+		System.out.println("Actual:   " + test.size());
+	}
+	
+	public static <E> void testingClear()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Clear            |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Queue<E> test = new Queue<E>();
+		
+		for(int i = 0; i < 25; i++)
+		{
+			Object testO = new String("Byee");
+			test.add(testO);
+		}
+		
+		System.out.println("Adding 25 items:");
+		System.out.println("Size of queue: " + test.size());
+		System.out.println("\nRemoving all items with clear:");
+		test.clear();
+		System.out.println("Size of queue:" + test.size());
+	}
+	
+	public static <E> void testingContain()
+	{
+		System.out.println("\n+++++++++++++++++++++++++++++++++++++");
+		System.out.println("|           Testing Contain         |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++");
+
+		Queue<E> test = new Queue<E>();
+		Object testO = new String("Bye");
+		Object testOO = new String("Bye");
+		test.add(testO);
+		
+		System.out.println("Adding Bye to queue:");
+		System.out.println("Input: " + test.peek());
+		System.out.println("\nSeeing if queue contains Bye: ");
+		System.out.println("Expected: true");
+		System.out.println("Actual:   " + test.contains(testOO));
+		
+		System.out.println("\nQueue that does not contain the item:");
+		System.out.println("Input: Hello");
+		System.out.println(test.contains(new String("Hello")));
+		
+		
+	}
+
+}

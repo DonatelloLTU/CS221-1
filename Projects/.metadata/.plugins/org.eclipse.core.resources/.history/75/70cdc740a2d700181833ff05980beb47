@@ -1,0 +1,83 @@
+
+public class StackReferenceBasedTesting {
+
+	/**
+	 * Main call to test all methods in StackReferenceBased
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|     Testing Stack Reference Based List     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++++++++");
+
+		StackReferencedBasedTesting();
+		isEmptyTesting();
+		pushTesting();
+		popTesting();
+		popAllTesting();
+		peekTesting();
+	}//EOM
+	
+	/**
+	 * Testing the constructor to make sure it is initialized to null
+	 */
+	public static void StackReferencedBasedTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|       Testing Constructor        |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		
+	}// End of StackReferencedBasedTesting
+	
+	/**
+	 * Testing to see if the stack is empty or not
+	 */
+	public static void isEmptyTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isEmpty          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		
+	}// End of isEmptyTesting
+	
+	/**
+	 * Testing to add an item to the stack
+	 */
+	public static void pushTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing push           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		
+	}// End of pushTesting
+	
+	/**
+	 * Testing to remove an item from the stack
+	 */
+	public static void popTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|       Testing pop        |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+	}// End of popTesting
+	
+	/**
+	 * Testing to remove all items from the stack
+	 */
+	public static void popAllTesting()
+	{
+		
+	}// End of popAllTesting
+	
+	/**
+	 * Testing to see the item that is on the top of the stack
+	 */
+	public static void peekTesting()
+	{
+		
+	}// End of peekTesting
+}// EOF

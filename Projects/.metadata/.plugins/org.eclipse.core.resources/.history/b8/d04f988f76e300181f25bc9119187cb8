@@ -1,0 +1,43 @@
+/**
+ * Interface for Queue
+ * @author Mikael Hinton
+ *
+ */
+public interface IQueue<E> extends Collection<E> {
+	
+	/**
+	 * Retrieves, but does not remove, the head of this queue.
+	 * @return Retrieves head of queue
+	 * @throws NoSuchElementException - if this queue is empty
+	 */
+	public E element() throws NoSuchElementException;
+	
+	/**
+	 * Inserts the specified element into this queue if it is possible to do so
+	 *  immediately without violating capacity restrictions.
+	 * @param e
+	 * @return True - item is added to queue, False - Capacity is reached
+ 	 */
+	public boolean offer(E e);
+	
+	/**
+	 * Retrieves, but does not remove, the head of this queue, or returns null if 
+	 * this queue is empty.
+	 * @return Retrieves head of queue or null is queue is empty
+	 */
+	public E peek();
+	
+	/**
+	 * Retrieves and removes the head of this queue, or returns null if this queue
+	 *  is empty.
+	 * @return Retrieves and removes head of queue, or null is queue is empty
+	 */
+	public E poll();
+	
+	/**
+	 * Retrieves and removes the head of this queue.
+	 * @return Head of queue
+	 * @throws NoSuchElementException - if this queue is empty
+	 */
+	public E remove() throws NoSuchElementException;
+}

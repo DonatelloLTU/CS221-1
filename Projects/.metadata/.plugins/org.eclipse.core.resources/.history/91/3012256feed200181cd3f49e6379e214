@@ -1,0 +1,6 @@
+
+public interface IPrefixExpressionsADT {
+
+	public boolean isPrefix();
+	public double evaluatePrefix();
+}

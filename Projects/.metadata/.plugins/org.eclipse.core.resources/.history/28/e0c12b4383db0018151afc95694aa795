@@ -1,0 +1,64 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import java.awt.Component;
+import javax.swing.Box;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+import java.awt.Font;
+
+public class GameRules_GUI extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void GameRulesScreen() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GameRules_GUI frame = new GameRules_GUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GameRules_GUI() {
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 720, 480);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 153, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		Component glue = Box.createGlue();
+		glue.setBounds(0, 0, 702, 433);
+		contentPane.add(glue);
+		
+		JLabel lblNewLabel = new JLabel("RULES");
+		lblNewLabel.setFont(new Font("Segoe Print", Font.BOLD, 48));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(241, 13, 221, 60);
+		contentPane.add(lblNewLabel);
+		
+		JTextArea txtrTheObjectOf = new JTextArea();
+		txtrTheObjectOf.setFont(new Font("Segoe Print", Font.PLAIN, 16));
+		txtrTheObjectOf.setText("\tThe object of the game is to build all the cards face up on the foundations. \r\nEach foundation builds upward, in sequence, starting with the Ace. Only aces may be \r\nmoved to an empty foundation, and only the next higher card of the same suit can be\r\nadded to the foundation.\r\n\r\nOnly one card at a time may be moved in FreeCell, either the top card of a tableau column or the single card which was placed in a free cell. As a short cut, Klondike allows you to move a legal sequence of cards from one column to another, provided there are enough empty cells to have made this move one card at a time. The move will be scored as if you had moved one card at a time.\r\n\r\nOnly the next higher card of the same suit can be added to each foundation. Cards may be moved to the foundation from the tableau or a free cell.\r\n\r\nAny card may be moved to an empty free cell or an empty tableau column.\r\n\r\nA card may be added to a non-empty column in the tableau only if it is the next lower value than the current top card and of alternating color. For example, only the 9 of hearts or diamonds (red suits) may play on the 10 of spades (a black suit).");
+		txtrTheObjectOf.setBounds(0, 86, 652, 347);
+		contentPane.add(txtrTheObjectOf);
+	}
+}

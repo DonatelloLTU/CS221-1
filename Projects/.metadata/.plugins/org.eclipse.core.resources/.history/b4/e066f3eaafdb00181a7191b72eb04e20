@@ -1,0 +1,179 @@
+import java.util.Stack;
+
+/**
+ * Class that converts and evaluates the Infix expression to a Postfix Expression
+ * @author Mikael Hinton
+ *
+ */
+public class Calculator {
+
+	/***********************************Variables***********************************/
+
+	public String InFixStrExp;
+	public String PostFixStrExp;
+	
+	/***********************************Public Methods***********************************/
+	
+	/**
+	 * Overloaded constructor to pass in the InFix String
+	 * @param newInFixStrExp
+	 */
+	Calculator(String newInFixStrExp)
+	{
+		InFixStrExp = newInFixStrExp;
+	}
+	
+	
+	/**
+	 * Evaluates the converted postfix expression and either adds, multiplying, dividing, mod, and subtracts
+	 * @return
+	 * @throws IllegalStateException
+	 */
+	public int evaluate() throws IllegalStateException
+	{
+		getPostFix();
+		
+		for(int i = 0; i < PostFixStrExp.length(); i++)
+		{
+			StackReferencedBased stack = new StackReferencedBased();
+
+			char ch = PostFixStrExp.charAt(i);
+			chInt = ch - '0';
+			
+			if(Character.isDigit(ch))
+			{
+				stack.push(chInt);
+			}
+			
+			
+		}
+		return chInt;
+
+	
+	
+	
+	
+	}// End of evaluate
+	
+	/**
+	 * Gets the postfix expression after is has been converted from infix to postfix
+	 * @throws IllegalStateException
+	 */
+	public String getPostFix() throws IllegalStateException
+	{
+		if(convertPostFix() == true)
+		{
+			return PostFixStrExp;
+		}
+		else
+		{
+			throw new IllegalStateException("Could not convert to PostFix");
+		}
+		
+	}// End of getPostFix
+	
+	/**
+	 * Returns the resulting postfix expression
+	 */
+	public String toString()
+	{
+		return PostFixStrExp;
+	}// End of toString
+	
+	
+	/***********************************Private Methods***********************************/
+	
+	/**
+	 * Converts the user input infix expression to postfix expression 
+	 * @return
+	 */
+	private boolean convertPostFix()
+	{
+		PostFixStrExp = new String("");
+		StackReferencedBased stack = new StackReferencedBased();
+		
+		
+		for(int i = 0; i < InFixStrExp.length(); ++i)	// parse through the String
+		{
+			char ch = InFixStrExp.charAt(i);
+			
+			if(Character.isLetterOrDigit(ch))	// Character in the stack is a letter or digit
+			{
+				PostFixStrExp += ch;
+			}
+			else if(ch == '(')	// Character in the stack is a (
+			{
+				stack.push(ch);
+			}
+			else if(ch == ')')	// Character in the stack is a )
+			{
+				while((char)stack.peek() != '(')	// stack is not empty and peek is not (
+				{
+					if(!stack.isEmpty())
+					{
+						PostFixStrExp += stack.pop();
+					}
+					else
+					{
+						return false;
+					}
+				}
+			stack.pop();
+			}
+			else
+			{
+				while((char)Precedence(ch) <= Precedence((char)stack.peek()))	// While the current precedence is less than 
+																				// or equal to the next then it keeps popping
+				{
+					if(!stack.isEmpty())
+					{
+						PostFixStrExp += stack.pop();
+					}
+					else
+					{
+						return false;
+					}
+				}
+			stack.push(ch);
+			}		
+		}
+	while(!stack.isEmpty())		// When the stack is not empty and stack peeks and it is a ( then returns false
+								// or it keeps popping till it sees a (
+	{
+		if((char)stack.peek() == '(' || stack.isEmpty())
+		{
+			return false;
+		}
+		else
+		{
+			PostFixStrExp += stack.pop();
+		}
+	}
+	return true;
+	}// End of convertPostFix
+	
+	/**
+	 * Returns the precedence of a operator
+	 * 	The higher the returned value the higher the precedence
+	 * @param ch
+	 * @return
+	 */
+	private int Precedence(char ch)
+	{
+		if(ch == '+' || ch == '-')
+		{
+			return 1;
+		}
+		else if(ch == '*' || ch == '/' || ch =='%')
+		{
+			return 2;
+		}
+		else
+		{
+			return -1;
+		}
+	}// End of Precedence
+	
+	
+
+}// EOF

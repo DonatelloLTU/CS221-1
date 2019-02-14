@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 elements to &apos;Queue/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;Assignment #7&apos;&#x0D;&#x0A;- Destination element: &apos;Queue/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     StackReferencedBased.java&#x0D;&#x0A;     IStack.java&#x0D;&#x0A;     StackException.java&#x0D;&#x0A;     Node.java" description="Copy compilation units" destination="=Queue/src&lt;" element1="/src&lt;{StackReferencedBased.java" element2="/src&lt;{IStack.java" element3="/src&lt;{StackException.java" element4="/src&lt;{Node.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1541865096851" units="4" version="1.0"/>
+</session>

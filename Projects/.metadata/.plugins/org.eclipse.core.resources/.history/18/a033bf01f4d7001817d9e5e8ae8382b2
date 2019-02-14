@@ -1,0 +1,115 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.BoxLayout;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+
+public class FreeCell_GUI extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FreeCell_GUI frame = new FreeCell_GUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FreeCell_GUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1080, 720);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton Reset = new JButton("Reset Game");
+		Reset.setBounds(473, 93, 113, 25);
+		Reset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		contentPane.setLayout(null);
+		
+		JButton btnGameRules = new JButton("Game Rules");
+		btnGameRules.setBounds(473, 62, 113, 25);
+		contentPane.add(btnGameRules);
+		contentPane.add(Reset);
+		
+		JPanel panel = new JPanel();
+		panel.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		panel.setBackground(new Color(255, 255, 255));
+		panel.setBounds(12, 13, 104, 150);
+		contentPane.add(panel);
+		
+		JPanel panel_2 = new JPanel();
+		panel_2.setBackground(new Color(0, 204, 153));
+		panel_2.setBounds(598, 13, 104, 150);
+		contentPane.add(panel_2);
+		
+		JPanel panel_3 = new JPanel();
+		panel_3.setBackground(new Color(0, 204, 153));
+		panel_3.setBounds(714, 13, 104, 150);
+		contentPane.add(panel_3);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(new Color(0, 204, 153));
+		panel_4.setBounds(830, 13, 104, 150);
+		contentPane.add(panel_4);
+		
+		JPanel panel_5 = new JPanel();
+		panel_5.setBackground(new Color(0, 204, 153));
+		panel_5.setBounds(946, 13, 104, 150);
+		contentPane.add(panel_5);
+		
+		JPanel panel_8 = new JPanel();
+		panel_8.setBackground(new Color(0, 153, 255));
+		panel_8.setBounds(12, 174, 1038, 486);
+		contentPane.add(panel_8);
+		
+		
+		JPanel panel_6 = new JPanel();
+		panel_6.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		panel_6.setBackground(Color.WHITE);
+		panel_6.setBounds(244, 13, 104, 150);
+		contentPane.add(panel_6);
+		
+		JPanel panel_7 = new JPanel();
+		panel_7.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		panel_7.setBackground(Color.WHITE);
+		panel_7.setBounds(357, 13, 104, 150);
+		contentPane.add(panel_7);
+	}
+}

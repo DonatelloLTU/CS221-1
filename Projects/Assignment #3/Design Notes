@@ -1,0 +1,45 @@
+                                           Design Notes for Assignment #3
+____________________________________________________________________________________________________________________________
+
+
+	For this assignment it will be easier to use binary search since it is already sorted then you could look for the kth 
+smallest by sorting it and then go to the beginning and add the kth to 0 to get to the correct number.
+
+
+Pivot has to be first index
+
+
+if (k == pivotIndex - first + 1)
+	return arr[pivotindex]
+	
+else if (k < pivotIndex - first + 1)
+	kSmall(k, arr, first, pivotIndex -1)
+	
+else
+	kSmall(k - (pivotIndex - first + 1), arr, pivotIndex + 1, last)
+		
+		
+		Array doesnt change size
+		example
+		-------
+		
+		k = 5
+		Answer = 6
+		
+		arr = 4, 7, 6, 8, 1, 9, 2, 3
+		kSmall(5, arr, 0, 7)
+		
+		arr = 3, 1, 2, 4, 7, 6, 8, 9
+		pivotIndex - first + 1 = 3 - 0 + 1 = 4
+		k > 4
+		kSmall(1, arr, 4, 7)
+		arr = 7, 6, 8, 9
+		arr = 6, (index 5)7, 8, 9
+		pivotIndex - first + 1 = 5 - 4 + 1 = 2
+		k < 2
+		kSmall(1, arr, 4, 4)
+		6
+
+		
+Partition:
+	

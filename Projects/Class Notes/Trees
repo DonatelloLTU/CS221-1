@@ -1,0 +1,34 @@
+										Trees
+________________________________________________________________________________________________
+
+ADT
+
+	createBinaryTree();
+	createBinaryTree(rootItem);
+	makeEmpty();
+	isEmpty();
+	getRootItem(); throws TreeException
+	
+	createBinaryTree(rootItem, leftTree, rightTree);
+	setRootItem(newItem);
+	attachLeft(newItem); throws TreeException
+	attachRight(newItem); throws TreeException
+	attachLeftSubtree(leftTree); throws TreeException
+	attachRightSubtree(rightTree); throws TreeException
+	detachLeftSubtree(); throws TreeException
+	detachRightSubtree(); throws TreeException
+	
+	
+Referenced Based Implementation of ADT Binary Tree
+
+	TreeNode
+		- Represents a node in a binary tree
+	TreeException
+		- An exception class
+	BinaryTreeBasis
+		- An abstract class of basic tree operations	
+	BinaryTree
+		- Provides the general operations of a binary tree
+		- Extends BinaryTreeBasis
+	
+		

@@ -1,0 +1,28 @@
+/**
+ * Node Class
+ * @author Mikael Hinton
+ *
+ */
+public class Node {
+	
+	private Object item;
+	private Node next;
+	
+	protected Node(Object newItem)
+	{
+		item = newItem;
+		next = null;
+	}
+	
+	protected Node(Object newItem, Node nextNode)
+	{
+		item = newItem;
+		next = nextNode;
+	}
+	
+	public Object getNode()
+	{
+		return item + next;
+	}
+	
+}//EOF

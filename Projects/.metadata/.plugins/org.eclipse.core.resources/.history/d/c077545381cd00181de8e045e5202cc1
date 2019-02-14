@@ -1,0 +1,164 @@
+/**
+ * Testing SortedListRefBased
+ * @author Mikael Hinton
+ *
+ */
+public class SortedListRefBasedTesting {
+	
+/****************************MAIN METHOD***********************************/
+
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|     Testing SortedListRefBased     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++");
+
+		
+		testingConstructor();
+		testingIsEmpty();
+		testingSize();
+		testingInsert();
+		testingRemove();
+		testingRemoveAll();
+		testingContains();
+		testingGetAll();
+	}//EOM
+
+/****************************TEST METHODS***********************************/
+		
+	/*
+	 * Testing constructor
+	 */
+	public static void testingConstructor()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing Constructor*");
+		
+		System.out.println("\nExpected:\nnull");
+		System.out.println("\nActual:\n" + list);
+	}//End of testingContructor
+	
+	/*
+	 * Testing isEmpty
+	 */
+	public static void testingIsEmpty()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing isEmpty*");
+		
+		System.out.println("\nIf list is empty:");
+		System.out.println("Expected:\ntrue");
+		System.out.println("\nActual:\n" + list.isEmpty());
+		
+		System.out.println("\nIf list is not empty:");
+		list.insert(new Integer(123456));
+		System.out.println("Expected:\nfalse");
+		System.out.println("\nActual:\n" + list.isEmpty());
+	}//End of testingIsEmpty
+	
+	/*
+	 * Testing size
+	 */
+	public static void testingSize()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing size*");
+		
+		System.out.println("When list is empty:");
+		System.out.println("Expected:\n0");
+		System.out.println("\nActual:\n" + list.size());
+		
+		System.out.println("\nWhen list has objects in it:");
+		System.out.println("Expected:\n1");
+		list.insert(new Integer(2));
+		
+		System.out.println("\nActual:\n" + list.size());
+	}//End of testingSize
+	
+	/*
+	 * Testing insert
+	 */
+	public static void testingInsert()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing insert*");
+		
+		list.insert(new Integer(2));
+		list.insert(new Integer(1234));
+		list.insert(new Integer(123));
+		list.insert(new Integer(12));
+		list.insert(new Integer(1));
+
+		list.printList();
+
+			
+	}//End of testingInsert
+	
+	/*
+	 * Testing remove
+	 */
+	public static void testingRemove()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing remove*");
+		list.insert(new Integer(2));
+		list.insert(new Integer(1234));
+		list.insert(new Integer(123));
+		list.insert(new Integer(12));
+		list.insert(new Integer(1));
+		list.printList();
+		list.remove(2);
+		list.printList();
+
+			
+	}//End of testingRemove
+	
+	/*
+	 * Testing removeAll
+	 */
+	public static void testingRemoveAll()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing removeAll*");
+
+			
+	}//End of testingRemoveAll
+	
+	/*
+	 * Testing contains
+	 */
+	public static void testingContains()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing contains*");
+
+		list.insert(new Integer(2));
+		list.insert(new Integer(1234));
+		list.insert(new Integer(123));
+		list.insert(new Integer(12));
+		list.insert(new Integer(1));
+		
+		System.out.println(list.contains(2));
+		list.contains(2);
+			
+	}//End of testingContains
+	
+	/*
+	 * Testing getAll
+	 */
+	public static void testingGetAll()
+	{
+		SortedListRefBased list = new SortedListRefBased();
+
+		System.out.println("\n\t*Testing getAll*");
+
+			
+	}//End of testingGetAll
+}//EOF

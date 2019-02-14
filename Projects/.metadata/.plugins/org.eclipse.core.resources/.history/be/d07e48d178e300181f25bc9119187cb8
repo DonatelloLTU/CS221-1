@@ -1,0 +1,48 @@
+/**
+ * Interface for Deque
+ * @author Mikael Hinton
+ *
+ */
+public interface IDeque<E> extends IQueue<E> {
+
+	// Three methods for adding an element, if no space is
+	// available, they throw IllegalStateException
+	
+	/**
+	 * Inserts the specified element into the queue
+	 * represented by this deque (in other words, at the
+	 * tail of this deque).
+	 */
+	public boolean add(E e) throws IllegalStateException;
+	
+	/**
+	 * Inserts the specified element at the front of this deque.
+	 * @param e
+	 * @throws IllegalStateException
+	 */
+	public void addFirst(E e) throws IllegalStateException;
+	
+	/**
+	 * 
+	 * @param e
+	 * @throws IllegalStateException
+	 */
+	public void addLast(E e) throws IllegalStateException;
+	
+	/**
+	 * Inserts the specified element into the queue
+	 * represented by this deque (in other words, at the 
+	 * tail of this deque), returning true upon success and 
+	 * false if no space is currently available.
+	 * @param e
+	 */
+	public boolean offer(E e);
+	
+	/**
+	 * Inserts the specified element at the front of this deque,
+	 * returning true upon success and false if no 
+	 * space is curre
+	 * @param e
+	 */
+	public boolean offerFirst(E e);
+}

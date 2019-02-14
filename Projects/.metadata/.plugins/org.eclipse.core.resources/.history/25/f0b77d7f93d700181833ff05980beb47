@@ -1,0 +1,9 @@
+
+public interface IStack {
+	
+	public boolean isEmpty();
+	// Determine whether the stack is empty.
+	// PreCondition: None
+	// PostCondition: Returns true if the stack is empty;
+	// 		otherwise returns false
+}

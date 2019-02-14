@@ -1,0 +1,52 @@
+/**
+ * Test class to test all of the public methods in PrefixExpressions.java
+ * @author Mikael Hinton
+ */
+public class TestingPrefixExpressions{
+
+	/*
+	 * Main method
+	 */
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|    Testing PrefixExpression.java     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++");
+		System.out.println();
+		System.out.println();
+		
+		testingIsPrefix();
+		System.out.println();
+		testingEvaluatePrefix();
+	}//EOM
+
+	/*
+	 * testingIsPrefix method in PrefixExpressions.java
+	 */
+	public static void testingIsPrefix()
+	{
+		System.out.println("\t\t*Testing isPrefix()*");
+		
+	}//End of testingIsPrefix()
+	
+	/*
+	 * testingEvaluatePrefix method in PrefixExpressions.java
+	 */
+	public static void testingEvaluatePrefix()
+	{
+		System.out.println("\t\t*Testing EvaluatePrefix()*");
+		
+		String add = "+ab";
+		PrefixExpressions adding = new PrefixExpressions(add);
+		System.out.println("Adding two numbers together:\nExpected:\n10 + 11 = 21.0");
+		System.out.println("Actual:\n" + "10 + 11 = " + adding.evaluatePrefix());
+		
+		String sub = "-ab";
+		PrefixExpressions subtracting = new PrefixExpressions(sub);
+		System.out.println("Adding two numbers together:\nExpected:\n10 + 11 = 21.0");
+		System.out.println("Actual:\n" + "10 + 11 = " + prefix.evaluatePrefix());
+		
+	}//End of testingEvaluatePrefix()
+	
+	
+}//EOF

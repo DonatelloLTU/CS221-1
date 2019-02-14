@@ -1,0 +1,144 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.SwingConstants;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
+import javax.swing.BoxLayout;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.LineBorder;
+import java.awt.Button;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JLayeredPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JInternalFrame;
+
+public class FreeCell_GUI extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					FreeCell_GUI frame = new FreeCell_GUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public FreeCell_GUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1080, 720);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		JButton btnReset = new JButton("Reset Game");
+		btnReset.setBounds(473, 93, 113, 25);
+		btnReset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		contentPane.setLayout(null);
+		
+		JButton btnGameRules = new JButton("Game Rules");
+		btnGameRules.setBounds(473, 62, 113, 25);
+		contentPane.add(btnGameRules);
+		contentPane.add(btnReset);
+		
+		JPanel Freecell1 = new JPanel();
+		Freecell1.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		Freecell1.setBackground(new Color(255, 255, 255));
+		Freecell1.setBounds(12, 13, 104, 150);
+		contentPane.add(Freecell1);
+		
+		JPanel Freecell2 = new JPanel();
+		Freecell2.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		Freecell2.setBackground(Color.WHITE);
+		Freecell2.setBounds(128, 13, 104, 150);
+		contentPane.add(Freecell2);
+		
+		
+		JPanel Freecell3 = new JPanel();
+		Freecell3.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		Freecell3.setBackground(Color.WHITE);
+		Freecell3.setBounds(244, 13, 104, 150);
+		contentPane.add(Freecell3);
+		
+		JPanel Freecell4 = new JPanel();
+		Freecell4.setBorder(new LineBorder(new Color(0, 153, 255), 3));
+		Freecell4.setBackground(Color.WHITE);
+		Freecell4.setBounds(357, 13, 104, 150);
+		contentPane.add(Freecell4);
+		
+		JPanel Hearts = new JPanel();
+		Hearts.setBorder(new LineBorder(new Color(0, 204, 153), 3));
+		Hearts.setBackground(new Color(255, 255, 255));
+		Hearts.setBounds(598, 13, 104, 150);
+		contentPane.add(Hearts);
+		
+		JLabel lblHearts = new JLabel("Hearts");
+		Hearts.add(lblHearts);
+		
+		JPanel Clubs = new JPanel();
+		Clubs.setBorder(new LineBorder(new Color(0, 204, 153), 3));
+		Clubs.setBackground(Color.WHITE);
+		Clubs.setBounds(714, 13, 104, 150);
+		contentPane.add(Clubs);
+		
+		JLabel lblClubs = new JLabel("Clubs");
+		Clubs.add(lblClubs);
+		
+		JPanel Diamonds = new JPanel();
+		Diamonds.setBorder(new LineBorder(new Color(0, 204, 153), 3));
+		Diamonds.setBackground(Color.WHITE);
+		Diamonds.setBounds(830, 13, 104, 150);
+		contentPane.add(Diamonds);
+		
+		JLabel lblDiamonds = new JLabel("Diamonds");
+		Diamonds.add(lblDiamonds);
+		
+		JPanel Spades = new JPanel();
+		Spades.setBorder(new LineBorder(new Color(0, 204, 153), 3));
+		Spades.setBackground(Color.WHITE);
+		Spades.setBounds(946, 13, 104, 150);
+		contentPane.add(Spades);
+		
+		JLabel lblSpades = new JLabel("Spades");
+		Spades.add(lblSpades);
+		
+		JPanel Tableau = new JPanel();
+		Tableau.setBorder(new LineBorder(new Color(0, 204, 153), 3));
+		Tableau.setBackground(new Color(0, 153, 255));
+		Tableau.setBounds(12, 174, 1038, 486);
+		contentPane.add(Tableau);
+	}
+}

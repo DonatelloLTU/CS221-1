@@ -1,0 +1,70 @@
+/**
+ * Class that converts and evaluates the Infix expression to a Postfix Expression
+ * @author Mikael Hinton
+ *
+ */
+public class Calculator {
+
+	/***********************************Variables***********************************/
+
+	public String InFixstrExp;
+	public String PostFixStrExp;
+	
+	/***********************************Public Methods***********************************/
+	
+	/**
+	 * Evaluates the converted postfix expression and either adds, multiplying, dividing, mod, and subtracts
+	 * @return
+	 * @throws IllegalStateException
+	 */
+	public int evaluate() throws IllegalStateException
+	{
+		return 0;
+	}
+	
+	/**
+	 * Gets the postfix expression after is has been converted from infix to postfix
+	 * @throws IllegalStateException
+	 */
+	public void getPostFix() throws IllegalStateException
+	{
+		
+	}
+	
+	/**
+	 * Returns the resulting postfix expression
+	 */
+	public String toString()
+	{
+		return "";
+	}
+	
+	
+	/***********************************Private Methods***********************************/
+	
+	/**
+	 * Converts the user input infix expression to postfix expression 
+	 * @return
+	 */
+	private boolean convertPostFix()
+	{
+		StackReferencedBased operatorStack = new StackReferencedBased();
+		
+		PostFixStrExp = "";
+		
+		for(int i = 0; i < InFixstrExp.length(); ++i)
+		{
+			char ch = InFixstrExp.charAt(i);
+			
+			switch(ch)
+			{
+			case ch == '0' || ch == '1' || ch == '2' :
+			}
+		}
+		
+		return false;
+	}
+	
+	
+
+}// EOF

@@ -1,0 +1,65 @@
+/**
+ * An implementation that uses the ADT list
+ * @author Mikael Hinton
+ *
+ */
+public class StackReferencedBased implements IStack{
+
+	private Node top;	// top of the stack
+	
+	public StackReferencedBased()
+	{
+		top = null;
+	}// End of constructor
+	
+	@Override
+	public boolean isEmpty() {
+		
+		return top == null;
+	}// End of isEmpty
+		
+	@Override
+	public void push(Object newItem)
+	{
+
+		top = new Node(newItem, top);
+	}// End of push
+
+	@Override
+	public Object pop() throws StackException {
+		
+		if(!isEmpty())
+		{
+			Node temp = top;
+			top = top.next;
+			return temp.item;
+		}
+		else
+		{
+			throw new StackException("StackException on " + "pop: stack empty");
+		}// End if
+	}// End of pop
+
+	@Override
+	public void popAll() {
+
+		top = null;
+	}// End of popAll
+
+	@Override
+	public Object peek() throws StackException {
+		
+		if(!isEmpty()) 
+		{
+			return top.item;
+		}
+		else
+		{
+			throw new StackException("Stack Exception on " + "peek: stack empty");
+		}
+	}
+
+
+	
+
+}

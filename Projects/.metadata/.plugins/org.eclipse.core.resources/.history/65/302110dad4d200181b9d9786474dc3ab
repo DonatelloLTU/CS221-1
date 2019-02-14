@@ -1,0 +1,16 @@
+
+public class TestingPrefixExpressions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}//EOM
+
+	
+	public void testingIsPrefix()
+	{
+		
+	}
+	
+	
+}//EOF

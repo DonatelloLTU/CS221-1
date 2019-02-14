@@ -1,0 +1,55 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import java.awt.Color;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import java.awt.Component;
+import javax.swing.Box;
+
+public class GameRules_GUI extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void GameRules() {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GameRules_GUI frame = new GameRules_GUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public GameRules_GUI() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 720, 480);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 153, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JTextArea txtrEdekbdejd = new JTextArea();
+		txtrEdekbdejd.setBackground(new Color(0, 153, 255));
+		txtrEdekbdejd.setBounds(129, 110, 446, 214);
+		txtrEdekbdejd.setText("dedjed\r\nedojebdoed\r\nedeodedoede\r\nde\r\nndeide\r\n");
+		contentPane.add(txtrEdekbdejd);
+		
+		Component glue = Box.createGlue();
+		glue.setBounds(0, 0, 702, 433);
+		contentPane.add(glue);
+	}
+}

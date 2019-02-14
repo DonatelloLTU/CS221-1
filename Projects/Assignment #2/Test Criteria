@@ -1,0 +1,18 @@
+|                               Test Criteria                                               |
+---------------------------------------------------------------------------------------------
+
+Test the BigInt constructor to make sure that the integer that is being represented as
+	a string is initialized.
+	 	
+	 	You would also need to test to make sure it works with a leading zero and plain zero.
+	 	
+Would not need to test the toString method since it will be ran everytime the program is used
+
+Test the max method to make sure that it gives the right number and not the smaller number
+
+Test the min method to make sure that it gives the right number and not the bigger number
+
+Test the add method making sure that it added correctly and isnt off by any numbers
+
+Test the multiply method by making sure that the multiplied numbers and correct and not off by
+	any numbers 

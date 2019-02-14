@@ -1,0 +1,65 @@
+/**
+ * Determine if string is a prefix expression and evaluate it 
+ * @author Mikael Hinton
+ *
+ */
+public class PrefixExpressions {
+	
+	public String strExp = "+ab";
+	
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean isPrefix()
+	{
+		
+	}
+	
+	/**
+	 * 
+	 * @param first
+	 * @param last
+	 * @return
+	 */
+	private  int endPrefix(int first, int last)
+	{
+		// Finds the end of a prefix expression, if one exists
+		// Preconditions: The substring of strExp from index first
+		//      Through last contains no blank characters
+		// Postconditions: Returns the index of the last character
+		//		in strExp that begins at index first, if one exists, or
+		//		returns -1 if no such prefix expression exists.
+		
+		if(first < 0 || first > last)
+		{
+			return -1;
+		}
+		
+		char ch = strExp.charAt(first);
+		
+		if(ch == "")
+		
+	}
+	
+	/**
+	 * 
+	 * @param strExp
+	 * @return
+	 */
+	public double evaluatePrefix(StringBuffer strExp)
+	{
+		// Evaluates the prefix expression strExp
+		// Preconditions: strExp is a string consisting of a valid
+		//		prefix expression containing no blanks
+		// Postconditions: Returns the value of the prefix expression
+		char first = null;
+		char ch = strExp.charAt(first);
+		
+		
+		return 1.00;
+	}
+	
+
+}

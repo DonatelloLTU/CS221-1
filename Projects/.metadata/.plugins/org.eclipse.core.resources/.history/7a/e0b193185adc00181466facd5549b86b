@@ -1,0 +1,302 @@
+/**
+ * Testing the public methods that are in the 
+ * 		Calculator.java class.
+ * 
+ * All methods should have 100% coverage
+ * 		and be exhaustively tested.
+ * 
+ * @author Mikael Hinton
+ *
+ */
+public class CalculatorTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|                Testing Calculator               |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		testingEvaluate2();
+		testingEvaluateMore();
+		testingGetPostFix();
+		
+	}// EOM
+
+	/**
+	 * Testing the evaluate method in the calculator class
+	 * 		WITH 2 numbers only
+	 */
+	public static void testingEvaluate2()
+	{
+		System.out.println("\n\t++++++++++++++++++++++");
+		System.out.println("\t| Testing Evaluate() |");
+		System.out.println("\t++++++++++++++++++++++");
+
+		/*
+		 * ADDING
+		 */
+		System.out.println("\nAdding 2 numbers together:");
+		System.out.println("\nInput: (1+2)");
+		Calculator add = new Calculator("(1+2)");
+		System.out.println("Expected: 3");
+		System.out.println("Actual:   " + add.evaluate());
+		
+		System.out.println("\nInput: (9+9)");
+		Calculator add1 = new Calculator("(9+9)");
+		System.out.println("Expected: 18");
+		System.out.println("Actual:   " + add1.evaluate());
+		
+		System.out.println("\nInput: (0+0)");
+		Calculator add2 = new Calculator("(0+0)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + add2.evaluate());
+		
+		/*
+		 * SUBTRACTING!
+		 */
+		System.out.println("\nSubtracting 2 numbers together:");
+		System.out.println("\nInput: (9-2)");
+		Calculator sub = new Calculator("(9-2)");
+		System.out.println("Expected: 7");
+		System.out.println("Actual:   " + sub.evaluate());
+		
+		System.out.println("\nInput: (9-9)");
+		Calculator sub1 = new Calculator("(9-9)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + sub1.evaluate());
+		
+		System.out.println("\nInput: (0-0)");
+		Calculator sub2 = new Calculator("(0-0)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + sub2.evaluate());
+		
+		/*
+		 * DIVIDING
+		 */
+		System.out.println("\nDividing 2 numbers together:");
+		System.out.println("\nInput: (9/3)");
+		Calculator div = new Calculator("(9/3)");
+		System.out.println("Expected: 3");
+		System.out.println("Actual:   " + div.evaluate());
+		
+		System.out.println("\nInput: (0/1)");
+		Calculator div1 = new Calculator("(0/1)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + div1.evaluate());
+		
+		System.out.println("\nInput: (9/1)");
+		Calculator div2 = new Calculator("(9/1)");
+		System.out.println("Expected: 9");
+		System.out.println("Actual:   " + div2.evaluate());
+		
+		try
+		{
+		System.out.println("\nInput: (9/0)");
+		Calculator div3 = new Calculator("(9/0)");
+		System.out.println("Expected: Can not divide by 0");
+		System.out.println("Actual:   " + div3.evaluate());
+		}
+		catch(ArithmeticException Ae)
+		{
+			System.out.println("Actual:   Can not divide by 0");
+		}
+		
+		/*
+		 * MULTIPLYING
+		 */
+		System.out.println("\nMultiplying 2 numbers together:");
+		System.out.println("\nInput: (8*2)");
+		Calculator mult = new Calculator("(8*2)");
+		System.out.println("Expected: 16");
+		System.out.println("Actual:   " + mult.evaluate());
+		
+		System.out.println("\nInput: (0*0)");
+		Calculator mult1 = new Calculator("(0*0)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + mult1.evaluate());
+		
+		System.out.println("\nInput: (9*9)");
+		Calculator mult2 = new Calculator("(9*9)");
+		System.out.println("Expected: 81");
+		System.out.println("Actual:   " + mult2.evaluate());
+		
+		/*
+		 * MODULUS
+		 */
+		System.out.println("\nFinding remainder of 2 number:");
+		System.out.println("\nInput: (9%2)");
+		Calculator mod = new Calculator("(9%2)");
+		System.out.println("Expected: 4");
+		System.out.println("Actual:   " + mod.evaluate());
+		
+		System.out.println("\nInput: (0%0)");
+		Calculator mod1 = new Calculator("(0%1)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + mod1.evaluate());
+		
+		System.out.println("\nInput: (9%9)");
+		Calculator mod2 = new Calculator("(9%9)");
+		System.out.println("Expected: 1");
+		System.out.println("Actual:   " + mod2.evaluate());
+		
+		try
+		{
+		System.out.println("\nInput: (9%0)");
+		Calculator mod3 = new Calculator("(9%0)");
+		System.out.println("Expected: Can not divide by 0");
+		System.out.println("Actual:   " + mod3.evaluate());
+		}
+		catch(ArithmeticException Ae)
+		{
+			System.out.println("Actual:   Can not divide by 0");
+		}	
+	}// End of Evaluate2
+	
+	public static void testingEvaluateMore()
+	{
+		/*
+		 * ADDING
+		 */
+		System.out.println("\nAdding numbers together:");
+		System.out.println("\nInput: (1+2+3)");
+		Calculator add = new Calculator("(1+2+3)");
+		System.out.println("Expected: 6");
+		System.out.println("Actual:   " + add.evaluate());
+		
+		System.out.println("\nInput: ((9+9)+3)");
+		Calculator add1 = new Calculator("((9+9)+3)");
+		System.out.println("Expected: 21");
+		System.out.println("Actual:   " + add1.evaluate());
+		
+		System.out.println("\nInput: (((0+0)+0)+0)");
+		Calculator add2 = new Calculator("(((0+0)+0)+0)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + add2.evaluate());
+		
+		/*
+		 * SUBTRACTING!
+		 */
+		System.out.println("\nSubtracting numbers together:");
+		System.out.println("\nInput: ((9-2)-5)");
+		Calculator sub = new Calculator("((9-2)-5)");
+		System.out.println("Expected: 2");
+		System.out.println("Actual:   " + sub.evaluate());
+		
+		System.out.println("\nInput: (((9-9)-7)-6)");
+		Calculator sub1 = new Calculator("(((9-9)-7)-6)");
+		System.out.println("Expected: -13");
+		System.out.println("Actual:   " + sub1.evaluate());
+		
+		System.out.println("\nInput: (((0-0)-1)-0)");
+		Calculator sub2 = new Calculator("(((0-0)-1)-0)");
+		System.out.println("Expected: -1");
+		System.out.println("Actual:   " + sub2.evaluate());
+		
+		/*
+		 * DIVIDING
+		 */
+		System.out.println("\nDividing numbers together:");
+		System.out.println("\nInput: ((9/3)/1)");
+		Calculator div = new Calculator("((9/3)/1)");
+		System.out.println("Expected: 3");
+		System.out.println("Actual:   " + div.evaluate());
+		
+		System.out.println("\nInput: ((8/1)/4)");
+		Calculator div1 = new Calculator("((8/1)/4)");
+		System.out.println("Expected: 2");
+		System.out.println("Actual:   " + div1.evaluate());
+		
+		System.out.println("\nInput: (((9/1)/2)/3)");
+		Calculator div2 = new Calculator("(((9/1)/2)/3)");
+		System.out.println("Expected: 1");
+		System.out.println("Actual:   " + div2.evaluate());
+		
+		try
+		{
+		System.out.println("\nInput: (9/0)");
+		Calculator div3 = new Calculator("(9/0)");
+		System.out.println("Expected: Can not divide by 0");
+		System.out.println("Actual:   " + div3.evaluate());
+		}
+		catch(ArithmeticException Ae)
+		{
+			System.out.println("Actual:   Can not divide by 0");
+		}
+		
+		/*
+		 * MULTIPLYING
+		 */
+		System.out.println("\nMultiplying 2 numbers together:");
+		System.out.println("\nInput: (8*2)");
+		Calculator mult = new Calculator("(8*2)");
+		System.out.println("Expected: 16");
+		System.out.println("Actual:   " + mult.evaluate());
+		
+		System.out.println("\nInput: (0*0)");
+		Calculator mult1 = new Calculator("(0*0)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + mult1.evaluate());
+		
+		System.out.println("\nInput: (9*9)");
+		Calculator mult2 = new Calculator("(9*9)");
+		System.out.println("Expected: 81");
+		System.out.println("Actual:   " + mult2.evaluate());
+		
+		/*
+		 * MODULUS
+		 */
+		System.out.println("\nFinding remainder of 2 number:");
+		System.out.println("\nInput: (9%2)");
+		Calculator mod = new Calculator("(9%2)");
+		System.out.println("Expected: 4");
+		System.out.println("Actual:   " + mod.evaluate());
+		
+		System.out.println("\nInput: (0%0)");
+		Calculator mod1 = new Calculator("(0%1)");
+		System.out.println("Expected: 0");
+		System.out.println("Actual:   " + mod1.evaluate());
+		
+		System.out.println("\nInput: (9%9)");
+		Calculator mod2 = new Calculator("(9%9)");
+		System.out.println("Expected: 1");
+		System.out.println("Actual:   " + mod2.evaluate());
+		
+		try
+		{
+		System.out.println("\nInput: (9%0)");
+		Calculator mod3 = new Calculator("(9%0)");
+		System.out.println("Expected: Can not divide by 0");
+		System.out.println("Actual:   " + mod3.evaluate());
+		}
+		catch(ArithmeticException Ae)
+		{
+			System.out.println("Actual:   Can not divide by 0");
+		}	
+		
+	}// End of EvaluateMore
+
+	
+	/**
+	 * Testing the getPostFix method in the calculator class
+	 */
+	public static void testingGetPostFix()
+	{
+		System.out.println("\n\t++++++++++++++++++++++++++++");
+		System.out.println("\t| Testing convertPostFix() |");
+		System.out.println("\t++++++++++++++++++++++++++++");
+		
+		Calculator add = new Calculator("((1-2)-1)");
+		
+		try
+		{
+			System.out.println(add.getPostFix());
+		}
+		catch(Exception e)
+		{
+			System.out.println("Could not convert to PostFix");
+		}
+	}
+	
+	
+	
+}// EOF

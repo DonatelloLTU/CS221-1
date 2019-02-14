@@ -1,0 +1,11 @@
+
+public class Palindrome {
+
+	public String palStr = "";
+	
+	public Palindrome(String newStr) {
+		
+		newStr = palStr;
+	}
+
+}

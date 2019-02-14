@@ -1,0 +1,108 @@
+                                                  Recursion
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Backtracking
+	- A strategy for guessing at a solution and backing up when an impasse is reached
+
+Formal definition for JavaPrograms
+   +++++++++++++++++++
+   |: - such that    |
+   |{} - all strings |
+   |= - consists of  |
+   +++++++++++++++++++
+	(The language JavaPrograms consists of all strings w such that w is syntactically correct Java program)
+	JavaPrograms = {strings w : w is syntactically correct Java program}
+
+	AlgebraicExpressions = {w : w is an algebraic expression}
+
+Defining Languages
+	
+	Grammar
+		- States the rules for forming the strings in a language
+	
+	Benefits of recursive grammars
+		- A recognition algorithm determines whether a given string is in the language
+
+Basic of Grammar
+ 
+	- x|y means x or y
+	- xy means x followed by y 
+	- <word> means any instance of work that the definition defines
+	
+Java Identifiers
+	
+	- A Java identifier begins with a letter and is followed by zero or more letters and digits		
+	
+	- JavaIds = {w : w is a legal Java identifier
+	
+	- <identifier> = <letter> | <identifier><letter> | <identifier><digit>
+	- <letter> = a|b|...|z|A|B|...|Z|_|$
+	- <digits> = 0|1|...|9
+	
+Recognition algorithm
+
+	isId(w)
+	if(w is of length 1)
+	{
+		if(w is a letter)
+		{
+		return true
+		}
+		else
+		{
+		return false
+		}
+	}
+	else if(the last character of w is a letter or a digit)
+	{
+		return isId(w minus its last character)
+	}
+	else
+	{
+		return false
+	}
+	
+Palindromes
+	
+	- A string that reads the same from left to right as its does from right to left
+	- Ex: radar, deed
+	- Language
+		Palindromes = {w : w reads the same left to right as right to left}
+		
+	Grammar
+		- <pal> = empty string | <ch> | a<pal>a | b <pal> b |...|Z<pal>Z
+		- <ch> = a|b|...|z|A|B|...|Z
+			
+		isPal(w)
+			if(w is the empty string or w is of length 1)
+			{
+				return true
+			}
+			else if(w's first and last character are the same letter)
+			{
+				return isPal(w minus its first and last character)
+			}
+			else
+			{
+				return false
+			}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

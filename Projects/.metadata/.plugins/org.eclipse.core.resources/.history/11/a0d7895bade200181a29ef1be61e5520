@@ -1,0 +1,14 @@
+/**
+ * Testing QueueArrayBased.java
+ * @author Mikael Hinton
+ *
+ */
+public class QueueArrayBasedTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|        Testing Queue Array Based        |");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++");
+	}//EOM
+}//EOF

@@ -1,0 +1,27 @@
+
+public class QueueTesting<E> {
+	
+	public static <E> void main(String[] args) {
+
+		
+	}
+	
+	public static Queue<E> test = new Queue<E>();
+	
+	public static void testingAdd()
+	{
+		Object test;
+		test.remove();
+	}
+	
+	public static void testingRemove()
+	{
+		
+	}
+	
+	public static void testingIsEmpty()
+	{
+		
+	}
+
+}

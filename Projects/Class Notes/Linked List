@@ -1,0 +1,106 @@
+                                                      Linked List
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Options for implementing an ADT
+	- Array
+		- Has fixed size
+		- Data must be shifted during insertions and deletions
+	- Linked List
+		- Is able to grow in size as needed
+		- Does not require the shifting of items during insertions and deletions
+		
+A reference variable
+	- Contains the location of an object
+	- Example:
+		Integer intRef
+		intRef = new Integer(5);
+	- As a data field of a class
+		- Has the default value null
+	- A local reference variable to a method
+		- Does not have a default value
+	
+When one reference variable is assigned to another reference variable, 
+	both references then refer to the same object
+	
+	Integer p, q;
+	p = new Integer(6);
+	q = p;
+
+A reference variable that no longer references any object is marked for garbage collection
+
+An array of objects
+	- Is actually an array of references to the objects
+	- Example:
+		Integer[] scores = new Integer[30];
+	- Instantiating Integer objects for each array reference
+		scores[0] = new Integer(7);
+		scores[1] = new Integer(9);
+		
+Equality operators(== and !=)
+	- Compares the values of the reference variables, not the objects that they reference
+equals method
+	- Compares objects field by field
+When an object is passed to a method as an argument, the reference to the object is copied to
+	the methods formal parameter
+Reference-based ADT implementations and data structures use java references
+
+Resizable Arrays
+	- The number of references in a java array is of fixed size
+	- Resizable array
+		- An array that grows and shrinks as the program executes
+		- An illusion that is created by using an allocate and copy strategy with fixed-sized arrays
+	- java.util.Vector class
+		- Uses a similar technique to implement a growable array of objects
+Reference-Based linked lists
+	- Linked list
+		- Contains nodes that are linked to one another
+		- A node contains both data and a link to the next item
+		- Access is a package-private
+			
+			package List;
+			class Node
+			{
+			Object item;
+			Node next;
+			// constructors, accessors,
+			// and mutators ...
+			} // end class Node
+
+	Using the Node Class in Linked list
+		- Node n = new Node(new Integer(6));
+		- Node first = new Node(new Integer(9), n);
+	
+		- Data field next in the last node is set to null
+		- head reference variable
+			- References the lists first node
+			- Always exists even when the list is empty
+		
+		- Head reference variable can be assigned null without first using new
+			- Following sequence results in a lost node
+				head = new Node();
+				head = null;
+		- curr reference variable
+			- references the current node
+			- Initially references the first node
+		- To display the data portion of the current node
+			System.out.println(curr.item); - Should only be used to test
+		- To advance the current position to the next node
+			curr = curr.next;
+	Displaying the contents of a linked list
+		- To display all the data items in a linked list
+			
+			for(Node curr = head; curr != null; curr = curr.next)
+			{
+			System.out.println(curr.item);
+			}
+			
+	Deleting a specified Node from a linked list
+		- To delete node N which curr references
+			- Set next in the node the precedes N to reference the node that follows N
+				prev.next = curr.next;
+
+
+	
+		
+		
+                                                   

@@ -1,0 +1,12 @@
+
+public class StackReferenceBasedTesting {
+
+	public static void main(String[] args) {
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|     Testing Stack Reference Based List     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++++++++++++");
+
+		StackReferencedBasedTesting();
+	}
+
+}

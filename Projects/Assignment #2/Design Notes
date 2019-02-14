@@ -1,0 +1,21 @@
+|                                   Design Notes                                               |
+------------------------------------------------------------------------------------------------
+
+Needs to be able to handle numbers bigger than BigInteger class
+Simple calculations done with large nonnegative numbers
+A data structure that represents large numbers array or string
+A constructor that uses a string representation of an integer. This may contain leading zeros.
+A toString method that will e able to return the string representation of Bigint.
+A max method that returns a BigInt and whose value is maximum of val
+A min method that returns a BigInt and whose value is minimum of val
+A add method that returns a Bigint and whose value is the sum of val
+A multiply method that returns a BigInt and whose value is the product of val
+
+A test class to test all of the methods that I have mentioned above
+
+A main class that interacts with the user and allows them to input 2 numbers then the user
+	will be asked if they want to see the min,max,add or multiply.
+	
+	Use copy constructor
+	
+	Use algorithms in design notes

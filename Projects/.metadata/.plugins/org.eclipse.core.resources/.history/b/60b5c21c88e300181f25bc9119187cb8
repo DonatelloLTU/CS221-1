@@ -1,0 +1,34 @@
+
+public class QueueTesting<E> {
+	
+	
+	public static <E> void main(String[] args) {
+
+		Queue<E> hi = new Queue<E>();
+		
+		Object bla = new String("eded");
+		System.out.println(hi.isEmpty());
+		System.out.println(hi.add(bla));
+		System.out.println(hi.isEmpty());
+		System.out.println(hi.element());
+	}
+	
+	public static <E> void testingAdd()
+	{		
+		Queue<E> test = new Queue<E>();
+
+	}
+	
+	public static <E> void testingRemove()
+	{
+		Queue<E> test = new Queue<E>();
+
+	}
+	
+	public static <E> void testingIsEmpty()
+	{
+		Queue<E> test = new Queue<E>();
+
+	}
+
+}

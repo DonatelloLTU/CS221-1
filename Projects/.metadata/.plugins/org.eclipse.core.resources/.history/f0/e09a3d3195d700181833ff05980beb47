@@ -1,0 +1,47 @@
+
+public class StackReferencedBased implements IStack{
+
+	private Node top;
+	
+	public StackReferencedBased()
+	{
+		top = null;
+	}// End of constructor
+	
+	@Override
+	public boolean isEmpty() {
+		
+		return top == null;
+	}// End of isEmpty
+	
+	@Override
+	public Object pop() throws StackException {
+		
+		if(!isEmpty())
+		{
+			Node temp = top;
+			top = top.next;
+			return temp.item;
+		}
+	}
+
+	@Override
+	public void popAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void push(Object newItem) throws StackException {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Object peek() throws StackException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

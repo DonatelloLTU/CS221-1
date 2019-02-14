@@ -1,0 +1,135 @@
+/**
+ * Determine if string is a prefix expression and evaluate it 
+ * @author Mikael Hinton
+ *
+ */
+public class PrefixExpressions {
+		
+	/****************************VARIABLES***********************************/
+
+	public String strExp = "+ab";
+	private int size;
+	
+	/****************************PUBLIC METHODS***********************************/
+
+	/**
+	 * Determine whether the string expression in this class is a prefix expression
+	 * @return
+	 */
+	public boolean isPrefix()
+	{
+		// Preconditions: The class has a data field  strExp that
+		// has been initialized with a string expression that 
+		// contains no blank characters.
+		// Postconditions: Returns true if the expression is in
+		// prefix form, otherwise returns false
+		
+		size = strExp.length();
+		int lastChar = endPrefix(0, size - 1);
+		
+		if(lastChar >= 0 && lastChar == size - 1)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}	
+	}// End of isPrefix
+	
+	/**
+	 * 
+	 * @param strExp
+	 * @return
+	 */
+	public double evaluatePrefix(String strExp)
+	{
+		// Evaluates the prefix expression strExp
+		// Preconditions: strExp is a string consisting of a valid
+		//		prefix expression containing no blanks
+		// Postconditions: Returns the value of the prefix expression
+		//
+		// 		ch = first character of expression strExp
+		// 		Delete first character from strExp
+		// 		if(ch is an identifier) {
+		// 			// base case = single identifier
+		// 			return value of the identifier
+		// 		}
+		// 		else if(ch is an operator named op) {
+		// 			operand1 = evaluatePrefix(strExp)
+		//			operand2 = evaluatePrefix(strExp)
+		//		return operand1  op operand2
+		// 		}
+	
+		char ch = strExp.charAt(0);
+		String sub = strExp.substring(0);
+		System.out.println(sub);
+		System.out.println(ch);
+
+		return 1.00;
+		
+		
+	}// End of evaluatePrefix
+	
+	
+	/****************************PRIVATE METHODS***********************************/
+
+	/**
+	 * 
+	 * @param first
+	 * @param last
+	 * @return
+	 */
+	private  int endPrefix(int first, int last)
+	{
+		// Finds the end of a prefix expression, if one exists
+		// Preconditions: The substring of strExp from index first
+		//      Through last contains no blank characters
+		// Postconditions: Returns the index of the last character
+		//		in strExp that begins at index first, if one exists, or
+		//		returns -1 if no such prefix expression exists.
+		//		
+		//		if(first < 0 || first > last) {
+		//			return -1;
+		//		}
+		//		ch = character at position first of strExp;
+		//		if(ch is an identifier) {
+		//			// index of last character in simple prefix expression
+		//			return first
+		//		}
+		//		else if(ch is an operator) {
+		//			// find the end of the first prefix expression
+		//			firstEnd = endPrefix(first + 1, last);
+		//			
+		//			// if the end of the first expression was found
+		//			// find the end of the second prefix expression
+		//			
+		//			if(firstEnd > -1) {
+		//				return endPrefix(firstEnd + 1, last);
+		//			}
+		//			else {
+		//				return -1;
+		//			}
+		//		}	
+		//		else
+		//		{
+		//			return -1;
+		//		}
+		
+			  if (first < 0 or first > last) return -1; //illegal indices
+			  ch = character at position first of strExp;
+			  if (ch is an IDENTIFIER) return first
+			  if (ch is not an OPERATOR) return -1; //ch is not an ID. and not an OP.
+			  //here we know that ch is an OPERATOR
+			  firstEnd = endPre (first + 1, last); //find end of 1st PREFIX expression
+			                                       //recursively
+			  if (firstEnd >= 0) { //end of 1st PREFIX expression found?
+			    return endPre (firstEnd + 1, last); 
+			    //find end of 2nd PREFIX expression recursively
+			    //and return this position!
+			  }
+			  //here we know:
+			  //could not detect a legal end of the 1st PREFIX expression
+			  return -1;
+	}// End of endPrefix
+}//EOF

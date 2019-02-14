@@ -1,0 +1,26 @@
+                                                  Recursion
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Backtracking
+	- A strategy for guessing at a solution and backing up when an impasse is reached
+
+Formal definition for JavaPrograms
+
+	JavaPrograms = {strings w : w is syntactically correct Java program}
+
+	AlgebraicExpressions = {w : w is an algebraic expression}
+
+Defining Languages
+	
+	Grammar
+		- States the rules for forming the strings in a language
+	
+	Benefits of recursive grammars
+		- A recognition algorithm determines whether a given string is in the language
+
+Basic of Grammar
+ 
+	- x|y means x or y
+	- xy means x followed by y 
+	- <word> means any instance of work that the definition defines
+	

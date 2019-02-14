@@ -1,0 +1,13 @@
+1535390130826	Delete element
+1535390165692	Delete element
+1535500125647	Delete element
+1535553196581	Convert local variable 'result' to field
+1535553274667	Convert local variable 'r' to field
+1535553278911	Convert local variable 's' to field
+1535553332113	Convert local variable 'other' to field
+1535658604724	Encapsulate field 'Li'
+1535658616612	Encapsulate field 'sb'
+1535661214983	Infer generic type arguments
+1535662893467	Convert local variable 'carrySum' to field
+1535662900878	Convert local variable 'total' to field
+1535662907394	Convert local variable 'total' to field

@@ -1,0 +1,12 @@
+/**
+ * Testing QueueArrayBased.java
+ * @author Mikael Hinton
+ *
+ */
+public class QueueArrayBasedTesting {
+
+	public static void main(String[] args) {
+
+	}//EOM
+
+}//EOF

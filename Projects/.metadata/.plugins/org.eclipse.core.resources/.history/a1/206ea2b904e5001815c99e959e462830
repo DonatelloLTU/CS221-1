@@ -1,0 +1,40 @@
+/**
+ * Testing to all methods in Palindrome.java class
+ * @author Mikael Hinton
+ *
+ */
+public class PalindromeTesting {
+
+	public static void main(String[] args) 
+	{
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|        Testing Palindrome.java class             |");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		
+		testingPalindrome();
+		
+	}
+	
+	public static void testingPalindrome()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing Palindrome       |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		String str = new String();
+		str = "ABCBA1232";
+		Palindrome pal = new Palindrome(str);
+		
+		System.out.println(pal.isPalindrome());
+		
+		String str1 = new String();
+		str1 = "abcbaa";
+		Palindrome pal1 = new Palindrome(str1);
+		
+		System.out.println(pal1.isPalindrome());
+		
+		
+	}
+	
+
+}

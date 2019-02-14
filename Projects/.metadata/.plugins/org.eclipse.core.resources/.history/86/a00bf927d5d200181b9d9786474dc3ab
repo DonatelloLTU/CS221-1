@@ -1,0 +1,22 @@
+
+public class TestingPrefixExpressions {
+
+	public static void main(String[] args) {
+
+		System.out.println("/tTesting Prefix Expression");
+		
+	}//EOM
+
+	
+	public static void testingIsPrefix()
+	{
+		
+	}
+	
+	public static void testingEvaluatePrefix()
+	{
+		
+	}
+	
+	
+}//EOF

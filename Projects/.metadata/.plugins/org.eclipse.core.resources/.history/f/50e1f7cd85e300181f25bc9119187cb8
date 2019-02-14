@@ -1,0 +1,26 @@
+
+public class QueueTesting<E> {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public Queue<E> test = new Queue<E>();
+	
+	public static void testingAdd()
+	{
+		
+	}
+	
+	public static void testingRemove()
+	{
+		
+	}
+	
+	public static void testingIsEmpty()
+	{
+		
+	}
+
+}

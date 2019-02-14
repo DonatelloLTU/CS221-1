@@ -1,0 +1,123 @@
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class Queue implements IQueue{
+
+	public Queue()
+	{
+		T[] item;
+		
+	}
+	
+	@Override
+	public boolean add(Object arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of add
+
+	@Override
+	public boolean addAll(Collection arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of allAll
+
+	@Override
+	public void clear() {
+		// TODO Auto-generated method stub
+	}// End of clear
+
+	@Override
+	public boolean contains(Object arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of contains
+
+	@Override
+	public boolean containsAll(Collection arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of containsAll
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of isEmpty
+
+	@Override
+	public Iterator iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of iterator
+
+// Research
+	@Override
+	public boolean remove(Object arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of remove
+
+// Research
+	@Override
+	public boolean removeAll(Collection arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of removeAll
+
+	@Override
+	public boolean retainAll(Collection arg0) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of retainAll
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}// End of size
+
+	@Override
+	public Object[] toArray() {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of toArray
+
+	@Override
+	public Object[] toArray(Object[] arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of toArray
+
+	@Override
+	public Object element() throws NoSuchElementException {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of element
+
+	@Override
+	public boolean offer(Object e) {
+		// TODO Auto-generated method stub
+		return false;
+	}// End of offer
+
+	@Override
+	public Object peek() {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of peek
+
+	@Override
+	public Object poll() {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of poll
+
+	@Override
+	public Object remove() throws NoSuchElementException {
+		// TODO Auto-generated method stub
+		return null;
+	}// End of remove
+	
+	
+}//EOF

@@ -1,0 +1,142 @@
+/**
+ * Testing QueueArrayBased.java
+ * @author Mikael Hinton
+ *
+ */
+public class QueueArrayBasedTesting {
+
+	public static void main(String[] args) {
+
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|        Testing Queue Array Based        |");
+		System.out.println("+++++++++++++++++++++++++++++++++++++++++++");
+		
+		isEmptyTesting();
+		isFullTesting();
+		enqueueTesting();
+		dequeueTesting();
+		dequeueAllTesting();
+		peekTesting();
+	}//EOM
+	
+	/**
+	 * QueueArrayBased
+	 */
+	public static QueueArrayBased queue = new QueueArrayBased();
+	
+	/**
+	 * Testing isEmpty
+	 */
+	public static void isEmptyTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isEmpty          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("Array is empty:");
+		System.out.println("Input: ");
+		System.out.println("Expected: true");
+		System.out.println("Actual:   " + queue.isEmpty() + "\n");
+		
+		System.out.println("Array is not empty:");
+		System.out.println("Input: madam");
+		System.out.println("Expected: false");
+		try {
+			queue.enqueue(new String("helllo"));
+		} catch (QueueException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("Actual:   " + queue.isEmpty() + "\n");
+		
+		queue.dequeueAll();
+	}
+	
+	/**
+	 * Testing isFull
+	 */
+	public static void isFullTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isFull           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("Array is not full:");
+		System.out.println("Input:");
+		System.out.println("Expected: false");
+		System.out.println("Actual:   " + queue.isFull() + "\n");
+		
+		System.out.println("Array is full:");
+		for(int i = 0; i <= 50; i++)
+		{
+			try {
+				queue.enqueue(new String("hi"));
+			} catch (QueueException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Input: hi * 50");
+		System.out.println("Expected: true");
+		System.out.println("Actual:   " + queue.isFull());		
+		queue.dequeueAll();
+	}
+	
+	/**
+	 * Testing enqueue
+	 */
+	public static void enqueueTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing enqueue          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("Adding object to array:");
+		System.out.println("Input: Gary");
+		queue.enqueue(new String("Gary"));
+		
+		
+	}
+	
+	/**
+	 * Testing dequeue
+	 */
+	public static void dequeueTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing dequeue          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing dequeueAll
+	 */
+	public static void dequeueAllTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|       Testing dequeueAll         |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+	/**
+	 * Testing peek
+	 */
+	public static void peekTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing peek           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		
+	}
+	
+}//EOF

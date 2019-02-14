@@ -1,0 +1,21 @@
+/**
+ * Determine if string is a prefix expression and evaluate it 
+ * @author Mikael Hinton
+ *
+ */
+public class PrefixExpressions {
+	/**
+	 * 
+	 * @return
+	 */
+	public boolean isPrefix()
+	{
+		
+	}
+	
+	private  int endPrefix(int first, int last)
+	{
+		
+	}
+
+}

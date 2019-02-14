@@ -1,0 +1,34 @@
+/**
+ * Test class to test all of the public methods in PrefixExpressions.java
+ * @author Mikael Hinton
+ */
+public class TestingPrefixExpressions {
+
+	/*
+	 * Main method
+	 */
+	public static void main(String[] args) {
+
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|    Testing Prefix Expression     |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+	}//EOM
+
+	/*
+	 * testingIsPrefix method in PrefixExpressions.java
+	 */
+	public static void testingIsPrefix()
+	{
+		
+	}//End of testingIsPrefix()
+	
+	/*
+	 * testingEvaluatePrefix method in PrefixExpressions.java
+	 */
+	public static void testingEvaluatePrefix()
+	{
+		
+	}
+	
+	
+}//EOF

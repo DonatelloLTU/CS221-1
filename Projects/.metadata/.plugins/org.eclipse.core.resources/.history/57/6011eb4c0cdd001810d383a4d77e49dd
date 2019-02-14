@@ -1,0 +1,10 @@
+
+public interface IQueue {
+	
+	/**
+	 * Determines whether a queue is empty
+	 * @return true or false
+	 */
+	public boolean isEmpty();
+	
+}

@@ -1,0 +1,186 @@
+/**
+ * Testing the public methods that are in the 
+ * 		StackReferenceBasedTesting.java class.
+ * 
+ * All methods should have 100% coverage
+ * 		and be exhaustively tested.
+ * 
+ * @author Mikael Hinton
+ *
+ */
+public class StackReferencedBasedTesting {
+
+	// Initializing a new StackReferencedBased List
+	public static StackReferencedBased stack = new StackReferencedBased();
+		
+	/**
+	 * Main call to test all methods in StackReferenceBased
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+		System.out.println("|        Testing Stack Reference Based List        |");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++");
+
+		isEmptyTesting();
+		pushTesting();
+		popTesting();
+		popAllTesting();
+		peekTesting();
+		
+	}//EOM
+	
+	/**
+	 * Testing to see if the stack is empty or not
+	 */
+	public static void isEmptyTesting()
+	{
+		System.out.println();
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|         Testing isEmpty          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		
+		System.out.println("\nThe stack is empty:\nInput: N/A");
+		System.out.println("Expected: true");
+		System.out.println("Actual:   " + stack.isEmpty());
+		
+		System.out.println("\nThe stack is not empty:\nInput: 1 ");
+		System.out.println("Expected: false");
+		stack.push('1');
+		System.out.println("Actual:   " + stack.isEmpty() + "\n");
+		stack.popAll();
+	}// End of isEmptyTesting
+	
+	/**
+	 * Testing to add an item to the stack
+	 */
+	public static void pushTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing push           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		System.out.println("\nAdding 2 objects to the stack:");
+		stack.push('1');
+		System.out.println("Input: " + stack.peek());
+		stack.push('2');
+		System.out.println("Input: " + stack.peek());
+		
+		System.out.println("\nAdding 3 to the top of the stack:");
+		System.out.println("Expected: 3");
+		stack.push('3');
+		System.out.println("Actual:   " + stack.peek() + "\n");
+		stack.popAll();
+		
+		
+	}// End of pushTesting
+	
+	/**
+	 * Testing to remove an item from the stack
+	 */
+	public static void popTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing pop            |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		System.out.println("\nAdding 5 objects to the stack:");
+		stack.push('1');
+		System.out.println("Input: " + stack.peek());
+		stack.push('2');
+		System.out.println("Input: " + stack.peek());
+		stack.push('3');
+		System.out.println("Input: " + stack.peek());
+		stack.push('4');
+		System.out.println("Input: " + stack.peek());
+		stack.push('5');
+		System.out.println("Input: " + stack.peek());
+		
+		System.out.println("\nRemoving the item on the top of the stack:");
+		System.out.println("Expected: 4");
+		stack.pop();
+		System.out.println("Actual:   "  + stack.peek());
+		
+		try
+		{
+		stack.popAll();
+		System.out.println("\nWhen stack is empty and the user pops:");
+		stack.pop();
+		}
+		catch(StackException Se)
+		{
+			System.out.println("Stack is empty!");
+		}
+		
+		System.out.println();
+	}// End of popTesting
+	
+	/**
+	 * Testing to remove all items from the stack
+	 */
+	public static void popAllTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|          Testing popAll          |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		System.out.println("\nAdding 5 objects to the stack:");
+		stack.push('1');
+		System.out.println("Input: " + stack.peek());
+		stack.push('2');
+		System.out.println("Input: " + stack.peek());
+		stack.push('3');
+		System.out.println("Input: " + stack.peek());
+		stack.push('4');
+		System.out.println("Input: " + stack.peek());
+		stack.push('5');
+		System.out.println("Input: " + stack.peek());
+	
+		System.out.println("\nObjects in stack:");
+		System.out.println("Expected: false");
+		System.out.println("Actual:   " + stack.isEmpty());
+		stack.popAll();
+		System.out.println("\nAfter calling popAll:");
+		System.out.println("Expected: true");
+		System.out.println("Actual:   " + stack.isEmpty() + "\n");
+		
+		stack.popAll();
+	}// End of popAllTesting
+	
+	/**
+	 * Testing to see the item that is on the top of the stack
+	 */
+	public static void peekTesting()
+	{
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+		System.out.println("\t|           Testing peek           |");
+		System.out.println("\t++++++++++++++++++++++++++++++++++++");
+
+		System.out.println("\nAdding 5 objects to the stack:");
+		stack.push('1');
+		System.out.println("Input: " + stack.peek());
+		stack.push('2');
+		System.out.println("Input: " + stack.peek());
+		stack.push('3');
+		System.out.println("Input: " + stack.peek());
+		stack.push('4');
+		System.out.println("Input: " + stack.peek());
+		stack.push('5');
+		System.out.println("Input: " + stack.peek());
+		
+		System.out.println("\nPeeking to see top item on stack:");
+		System.out.println("Expected: 5");
+		System.out.println("Actual:   " + stack.peek());
+		
+		try
+		{
+			stack.popAll();
+			System.out.println("\nWhen stack is empty and the user peeks:");
+			stack.peek();
+		}
+		catch(StackException Se)
+		{
+			System.out.println("Stack is empty!");
+		}
+	}// End of peekTesting
+}// EOF

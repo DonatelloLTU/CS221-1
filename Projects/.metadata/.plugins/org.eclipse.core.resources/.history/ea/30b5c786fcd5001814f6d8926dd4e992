@@ -1,0 +1,13 @@
+											Stacks
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Stacks
+	- First in, last out data structure
+	
+ADT Stack Operations
+	- Create an empty stack
+	- Determine whether a stack is empty
+	- Add a new item to the stack
+	- Remove from the stack the item that was added most recently
+	- Remove all the items from the stack
+	- Retrieve from the stack the item that was added most recently

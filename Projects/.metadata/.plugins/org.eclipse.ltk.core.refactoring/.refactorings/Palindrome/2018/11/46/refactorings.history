@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy source folder &apos;src&apos; to &apos;Assignment #8&apos;&#x0D;&#x0A;- Original project: &apos;Palindrome&apos;&#x0D;&#x0A;- Destination element: &apos;Assignment #8&apos;&#x0D;&#x0A;- Original element: &apos;Palindrome/src&apos;" description="Copy source folder" destination="=Assignment \#8" element1="/src" flags="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyRoots" roots="1" stamp="1542130833676" version="1.0"/>
+</session>

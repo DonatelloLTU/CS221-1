@@ -1,0 +1,36 @@
+
+public class StackReferencedBased implements IStack{
+
+	private Node top;
+	
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void popAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void push(Object newItem) throws StackException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Object pop() throws StackException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object peek() throws StackException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

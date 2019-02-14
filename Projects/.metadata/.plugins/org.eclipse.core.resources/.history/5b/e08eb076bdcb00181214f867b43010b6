@@ -1,0 +1,16 @@
+/**
+ * Interface for a linkedListADT
+ * @author Mikael Hinton
+ *
+ */
+public interface LinkedList {
+	
+	public boolean isEmpty();
+	public int size();
+	public void insert(Object item);
+	public void remove(Object item);
+	public void removeAll();
+	public Object getItem(Object item);
+	public Object[] getAllItems();
+	
+}//EOI
